@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <style>
+      .btns {
+        box-shadow: rgb(60, 64, 67, 0.3) 0px 1px 2px 0px,
+          rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+        width: 130px;
+      }
+      .disabled-div {
+        opacity: 0.5;
+        pointer-events: none;
+      }
+    </style>
+  </head>
+  <body class="team_body_background">
+    <!-- main header -->
+    <div class="header">
+      <div class="logo">
+        <a href="{% url 'logbook_portal' %}">
+          <img
+            src="{% static 'images/emuinventlogo.jpg' %}"
+            alt="Logo"
+            width="170px"
+            height="40px"
+        /></a>
+      </div>
+      <!-- main header (notification) -->
+      <div class="row">
+        <!-- <div>
+          <button
+            class="btn btn-light align-items left"
+            type="button"
+            id="notification"
+          >
+            <img
+              src="{% static 'images/notification.png' %}"
+              alt="notification"
+              height="30"
+            />
+          </button>
+        </div> -->
+        <!-- main header (logout button) -->
+        <button class="btn btn-success"><a href="{% url 'logout' %}" style="text-decoration: none; color: white;">Logout Logbook</a></button>
+      </div>
+    </div>
+    <!-- main header ends -->
+    <!-- second header  -->
+    <nav class="navbars">
+      <div class="container-fluid-nav text-center">
+        <h5>Lets collaborate in teams to boost your productivity</h5>
+      </div>
+    </nav>
+    {% block content %} {% endblock %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </body>
+</html>
