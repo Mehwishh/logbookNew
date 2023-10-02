@@ -30,7 +30,7 @@
             "
             placeholder="Your Answer"
             name="materials"
-          >{{logbook.materials}}</textarea>
+          >{{step5.materials}}</textarea>
         </div>
         <div class="form-group">
           <label class="form-label" for="inputlg"
@@ -50,7 +50,7 @@
             "
             placeholder="Your Answer"
             name="findings"
-          >{{logbook.findings}}</textarea>
+          >{{step5.findings}}</textarea>
         </div>
 
       <div class="form-group">
@@ -68,7 +68,7 @@
           "
           placeholder="Your Answer"
           name="credit"
-        >{{logbook.credit}}</textarea>
+        >{{step5.credit}}</textarea>
       </div>
           <!-- Buttons-->
 
@@ -76,7 +76,7 @@
       <div class="row">
         <div class="col-6 d-flex align-items-center justify-content-start">
           <button class="btn btn-success mr-1" type="button">
-            <a href="{% url 'step_4' logbook.code %}">Back</a>
+            <a href="{% url 'step_4' 1 2 %}">Back</a>
           </button>
           {% include 'website/buttons.html' %}
     <!-- Buttons ends-->

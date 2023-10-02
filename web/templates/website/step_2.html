@@ -1,83 +1,339 @@
-{% extends 'website/header_2.html' %} 
-{% block title %}Step 2: DEFINE AND MAKE SENSE{% endblock %} 
-{% load static %} 
+{% extends 'website/header_2.html' %}
+{% block title %}Step 2: DEFINE AND MAKE SENSE{% endblock %}
+{% load static %}
 {% block content %}
-    <!-- second header  -->
-    <nav class="navbars">
-      <div class="container-fluid-nav text-center">
-        <h5>STEP 2- DEFINE AND MAKE SENSE OF THE PROBLEM</h5>
+<!-- second header  -->
+<nav class="navbars">
+  <div class="container-fluid-nav text-center">
+    <h5>STEP 2- DEFINE AND MAKE SENSE OF THE PROBLEM</h5>
+  </div>
+</nav>
+<!-- second header ends  -->
+<!-- Question Answeer Box -->
+<div class="QA_container mb-1 p-5">
+  <form method="post">
+    {% csrf_token %}
+    <div class="form-group">
+      <label class="form-label" for="inputlg">2.1 Talk to others and understand all aspects of the problems. Now,
+        pick one problem you want to move forward with and take the next
+        step.</label>
+      <div class="accordion" id="accordionPanelsStayOpenExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+              aria-controls="panelsStayOpen-collapseOne">
+              Problem 1:
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+            <div class="accordion-body">
+<div class="container">
+  <div class="row">
+    <!-- First Column -->
+    <div class="col-md-4 column">
+      <h3>Person Name</h3>
+      <div class="mb-3">
+        <input type="text" value="{{step2.p1name1}}" class="form-control" placeholder="Person name 1" id="name1" name="p1name1">
       </div>
-    </nav>
-    <!-- second header ends  -->
-    <!-- Question Answeer Box -->
-    <div class="QA_container mb-1 p-5">
-      <form method="post">
-        {% csrf_token %}
-        <div class="form-group">
-          <label class="form-label" for="inputlg"
-            >2.1 Talk to others and understand all aspects of the problems. Now,
-            pick one problem you want to move forward with and take the next
-            step.</label
-          >
-          <textarea
-            class="form-control"
-            rows="5"
-            style="
+      <div class="mb-3">
+        <input type="text" value="{{step2.p1name2}}" class="form-control" placeholder="Person name 2" id="name2" name="p1name2">
+      </div>
+      <div class="mb-3">
+        <input type="text" value="{{step2.p1name3}}" class="form-control" placeholder="Person name 3" id="name3" name="p1name3">
+      </div>
+      <div class="mb-3">
+        <input type="text" value="{{step2.p1name4}}" class="form-control" placeholder="Person name 4" id="name4" name="p1name4">
+      </div>
+    </div>
+
+    <!-- Second Column -->
+    <div class="col-md-4 column">
+      <h3>Age</h3>
+      <div class="mb-3">
+        <input type="number" value="{{step2.p1age1}}"  class="form-control" placeholder="Select age" id="age1" name="p1age1">
+      </div>
+      <div class="mb-3">
+        <input type="number" value="{{step2.p1age2}}"  class="form-control" placeholder="Select age" id="age2" name="p1age2">
+      </div>
+      <div class="mb-3">
+        <input type="number" value="{{step2.p1age3}}"  class="form-control" placeholder="Select age" id="age3" name="p1age3">
+      </div>
+      <div class="mb-3">
+        <input type="number" value="{{step2.p1age4}}"  class="form-control" placeholder="Select age" id="age4" name="p1age4">
+      </div>
+    </div>
+
+    <!-- Third Column -->
+    <div class="col-md-4 column">
+      <h3>Comments</h3>
+      <div class="mb-3">
+        <textarea class="form-control" placeholder="Write comments" id="comment1" name="p1comment1" rows="1">{{step2.p1comment1}}</textarea>
+      </div>
+      <div class="mb-3">
+
+        <textarea class="form-control" placeholder="Write comments" id="comment2" name="p1comment2" rows="1">{{step2.p1comment2}}</textarea>
+      </div>
+      <div class="mb-3">
+        <textarea class="form-control" placeholder="Write comments" id="comment3" name="p1comment3" rows="1">{{step2.p1comment3}}</textarea>
+      </div>
+      <div class="mb-3">
+        <textarea class="form-control" placeholder="Write comments" id="comment4" name="p1comment4" rows="1">{{step2.p1comment4}}</textarea>
+      </div>
+    </div>
+  </div>
+</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+              aria-controls="panelsStayOpen-collapseTwo">
+              Problem 2:
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+            <div class="accordion-body">
+<div class="container">
+  <div class="row">
+    <!-- First Column -->
+    <div class="col-md-4 column">
+      <h3>Person Name</h3>
+      <div class="mb-3">
+        <input type="text" value="{{step2.p2name1}}" class="form-control" placeholder="Person name 1" id="name1" name="p2name1">
+      </div>
+      <div class="mb-3">
+        <input type="text" value="{{step2.p2name2}}" class="form-control" placeholder="Person name 2" id="name2" name="p2name2">
+      </div>
+      <div class="mb-3">
+        <input type="text" value="{{step2.p2name3}}" class="form-control" placeholder="Person name 3" id="name3" name="p2name3">
+      </div>
+      <div class="mb-3">
+        <input type="text" value="{{step2.p2name4}}" class="form-control" placeholder="Person name 4" id="name4" name="p2name4">
+      </div>
+    </div>
+
+    <!-- Second Column -->
+    <div class="col-md-4 column">
+      <h3>Age</h3>
+      <div class="mb-3">
+        <input type="number" value="{{step2.p2age1}}" class="form-control" placeholder="Select age" id="age1" name="p2age1">
+      </div>
+      <div class="mb-3">
+        <input type="number" value="{{step2.p2age2}}" class="form-control" placeholder="Select age" id="age2" name="p2age2">
+      </div>
+      <div class="mb-3">
+        <input type="number" value="{{step2.p2age3}}" class="form-control" placeholder="Select age" id="age3" name="p2age3">
+      </div>
+      <div class="mb-3">
+        <input type="number" value="{{step2.p2age4}}" class="form-control" placeholder="Select age" id="age4" name="p2age4">
+      </div>
+    </div>
+
+    <!-- Third Column -->
+    <div class="col-md-4 column">
+      <h3>Comments</h3>
+      <div class="mb-3">
+        <textarea class="form-control" placeholder="Write comments" id="comment1" name="p2comment1" rows="1">{{step2.p2comment1}}</textarea>
+      </div>
+      <div class="mb-3">
+
+        <textarea class="form-control" placeholder="Write comments" id="comment2" name="p2comment2" rows="1">{{step2.p2comment2}}</textarea>
+      </div>
+      <div class="mb-3">
+        <textarea class="form-control" placeholder="Write comments" id="comment3" name="p2comment3" rows="1">{{step2.p2comment3}}</textarea>
+      </div>
+      <div class="mb-3">
+        <textarea class="form-control" placeholder="Write comments" id="comment4" name="p2comment4" rows="1">{{step2.p2comment4}}</textarea>
+      </div>
+    </div>
+  </div>
+</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+              aria-controls="panelsStayOpen-collapseThree">
+              Problem 3:
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+            <div class="accordion-body">
+<div class="container">
+    <div class="row">
+      <!-- First Column -->
+      <div class="col-md-4 column">
+        <h3>Person Name</h3>
+        <div class="mb-3">
+          <input type="text" value="{{step2.p3name1}}" class="form-control"placeholder="Person name 1"  id="name1" name="p3name1">
+        </div>
+        <div class="mb-3">
+          <input type="text" value="{{step2.p3name2}}" class="form-control"placeholder="Person name 2"  id="name2" name="p3name2">
+        </div>
+        <div class="mb-3">
+          <input type="text" value="{{step2.p3name3}}" class="form-control"placeholder="Person name 3"  id="name3" name="p3name3">
+        </div>
+        <div class="mb-3">
+          <input type="text" value="{{step2.p3name4}}" class="form-control"placeholder="Person name 4"  id="name4" name="p3name4">
+        </div>
+      </div>
+
+      <!-- Second Column -->
+      <div class="col-md-4 column">
+        <h3>Age</h3>
+        <div class="mb-3">
+          <input type="number" value="{{step2.p3age1}}" class="form-control"placeholder="Select age" id="age1" name="p3age1">
+        </div>
+        <div class="mb-3">
+          <input type="number" value="{{step2.p3age2}}" class="form-control"placeholder="Select age"  id="age2" name="p3age2">
+        </div>
+        <div class="mb-3">
+          <input type="number" value="{{step2.p3age3}}" class="form-control"placeholder="Select age"  id="age3" name="p3age3">
+        </div>
+        <div class="mb-3">
+          <input type="number" value="{{step2.p3age4}}" class="form-control"placeholder="Select age"  id="age4" name="p3age4">
+        </div>
+      </div>
+
+      <!-- Third Column -->
+      <div class="col-md-4 column">
+        <h3>Comments</h3>
+        <div class="mb-3">
+          <textarea class="form-control"placeholder="Write comments" id="comment1" name="p3comment1" rows="1">{{step2.p3comment1}}</textarea>
+        </div>
+        <div class="mb-3">
+
+          <textarea class="form-control"placeholder="Write comments" id="comment2" name="p3comment2" rows="1">{{step2.p3comment2}}</textarea>
+        </div>
+        <div class="mb-3">
+          <textarea class="form-control"placeholder="Write comments" id="comment3" name="p3comment3" rows="1">{{step2.p3comment3}}</textarea>
+        </div>
+        <div class="mb-3">
+          <textarea class="form-control"placeholder="Write comments" id="comment4" name="p3comment4" rows="1">{{step2.p3comment4}}</textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fourth accordion item -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false"
+              aria-controls="panelsStayOpen-collapseFour">
+              Problem 4:
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse">
+            <div class="accordion-body">
+<div class="container">
+  <div class="row">
+    <!-- First Column -->
+    <div class="col-md-4 column">
+      <h3>Person Name</h3>
+      <div class="mb-3">
+        <input type="text" value="{{step2.p4name1}}" class="form-control" placeholder="Person name 1" id="name1" name="p4name1">
+      </div>
+      <div class="mb-3">
+        <input type="text" value="{{step2.p4name2}}" class="form-control" placeholder="Person name 2" id="name2" name="p4name2">
+      </div>
+      <div class="mb-3">
+        <input type="text" value="{{step2.p4name3}}" class="form-control" placeholder="Person name 3" id="name3" name="p4name3">
+      </div>
+      <div class="mb-3">
+        <input type="text" value="{{step2.p4name4}}" class="form-control" placeholder="Person name 4" id="name4" name="p4name4">
+      </div>
+    </div>
+
+    <!-- Second Column -->
+    <div class="col-md-4 column">
+      <h3>Age</h3>
+      <div class="mb-3">
+        <input type="number" value="{{step2.p4age1}}" class="form-control" placeholder="Select age" id="age1" name="p4age1">
+      </div>
+      <div class="mb-3">
+        <input type="number" value="{{step2.p4age2}}" class="form-control" placeholder="Select age" id="age2" name="p4age2">
+      </div>
+      <div class="mb-3">
+        <input type="number" value="{{step2.p4age3}}" class="form-control" placeholder="Select age" id="age3" name="p4age3">
+      </div>
+      <div class="mb-3">
+        <input type="number" value="{{step2.p4age4}}" class="form-control" placeholder="Select age" id="age4" name="p4age4">
+      </div>
+    </div>
+
+    <!-- Third Column -->
+    <div class="col-md-4 column">
+      <h3>Comments</h3>
+      <div class="mb-3">
+        <textarea class="form-control" placeholder="Write comments" id="comment1" name="p4comment1" rows="1">{{step2.p4comment1}}</textarea>
+      </div>
+      <div class="mb-3">
+
+        <textarea class="form-control" placeholder="Write comments" id="comment2" name="p4comment2" rows="1">{{step2.p4comment2}}</textarea>
+      </div>
+      <div class="mb-3">
+        <textarea class="form-control" placeholder="Write comments" id="comment3" name="p4comment3" rows="1">{{step2.p4comment3}}</textarea>
+      </div>
+      <div class="mb-3">
+        <textarea class="form-control" placeholder="Write comments" id="comment4" name="p4comment4" rows="1">{{step2.p4comment4}}</textarea>
+      </div>
+    </div>
+  </div>
+</div>
+            </div>
+          </div>
+        </div>
+      </div><br>
+
+      <textarea class="form-control" rows="5" style="
               height: 100%;
               font-family: 'Times New Roman', Times, serif;
               font-size: 19px;
-            "
-            placeholder="Your Answer"
-            name="selected_problem"
-          >{{logbook.selected_problem}}</textarea>
-        </div>
-        <div class="form-group">
-          <label class="form-label" for="inputlg"
-            >2.2 Define and describe the problem in great detail so it captures
-            all aspects and conveys the same extent and nature of the problem
-            when someone else reads it. Share how you came up with the problem.
-            .</label
-          >
-          <textarea
-            class="form-control"
-            rows="5"
-            style="
+            " placeholder="Other notes" name="other_notes">{{step2.other_notes}}</textarea>
+    </div>
+    <div class="form-group">
+      <label class="form-label" for="inputlg">2.2 Define and describe the problem in great detail so it captures
+        all aspects and conveys the same extent and nature of the problem
+        when someone else reads it. Share how you came up with the problem.
+        .</label>
+      <textarea class="form-control" rows="5" style="
               height: 100%;
               font-family: 'Times New Roman', Times, serif;
               font-size: 19px;
-            "
-            placeholder="Your Answer"
-            name="describe_problem"
-          >{{logbook.describe_problem}}</textarea>
-        </div>
-      <div class="form-group">
-        <label class="form-label" for="inputlg"
-          >2.3 Very specifically, list what do you want your solution to
-          achieve? .</label
-        >
-        <textarea
-          class="form-control"
-          rows="5"
-          style="
+            " placeholder="Your Answer" name="describe_problem">{{step2.describe_problem}}</textarea>
+    </div>
+    <div class="form-group">
+      <label class="form-label" for="inputlg">2.3 Very specifically, list what do you want your solution to
+        achieve? .</label>
+      <textarea class="form-control" rows="5" style="
             height: 100%;
             font-family: 'Times New Roman', Times, serif;
             font-size: 19px;
-          "
-          placeholder="Your Answer"
-          name="specific_sol"
-        >{{logbook.specific_sol}}</textarea>
-      </div>
-      <!-- Buttons-->
+          " placeholder="Your Answer" name="specific_solution">{{step2.specific_solution}}</textarea>
+    </div>
+    <!-- Buttons-->
 
     <div class="container">
       <div class="row">
         <div class="col-6 d-flex align-items-center justify-content-start">
           <button class="btn btn-success mr-1" type="button">
-            <a href="{% url 'step_1' 1 %}">Back</a>
+            <a href="{% url 'step_1' 1 2  %}">Back</a>
           </button>
           {% include 'website/buttons.html' %}
-    <!-- Buttons ends-->
-    </form></div>
-    <!-- Question Answeer Box  Ends-->
-    
-    {% endblock %}
+          <!-- Buttons ends-->
+  </form>
+</div>
+<!-- Question Answeer Box  Ends-->
+
+{% endblock %}

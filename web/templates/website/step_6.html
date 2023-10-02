@@ -17,16 +17,16 @@
           <label class="form-label" for="inputlg"
             >6.1 Arrange the materials, tools and machinery you'll use to build
             your prototype. Do not hesitate to ask for help from others where
-            you need it.Proto1-Build: Note any and all observations you have
+            you need it. <br><br> Proto1-Build: Note any and all observations you have
             while building. Attach pictures of the process as you build.</label
           >
           <textarea
             class="form-control"
-            rows="8"
-            placeholder="Your Answer"
-            name="prototype"
-          >{{logbook.prototype}}</textarea>
-        </div>
+            rows="5"
+            placeholder="Write notes"
+            name="notes"
+          >{{step6.notes}}</textarea>
+        </div><br>
         <div class="form-group">
           <label for="formFileMultiple" class="form-label"
             >Upload Picture</label
@@ -36,24 +36,16 @@
             id="formFileLg"
             type="file"
             name="prototype_pic"
+            value="{{step6.prototype_pic}}"
           />
         </div>
-        <div class="form-group">
-          <label class="form-label" for="inputlg">Notes</label>
-          <textarea
-            class="form-control"
-            rows="5"
-            placeholder="Write notes"
-            name="notes"
-          >{{logbook.notes}}</textarea>
-        </div>
-              <!-- Buttons-->
+            <br>
 
     <div class="container">
       <div class="row">
         <div class="col-6 d-flex align-items-center justify-content-start">
           <button class="btn btn-success mr-1" type="button">
-            <a href="{% url 'step_5' logbook.code %}">Back</a>
+            <a href="{% url 'step_5' 1 2 %}">Back</a>
           </button>
           {% include 'website/buttons.html' %}
     <!-- Buttons ends-->

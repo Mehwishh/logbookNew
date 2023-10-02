@@ -396,8 +396,8 @@
           <label class="form-label" for="inputlg" style="color: green">
             <b>
               At this point, consider if you need to go back
-              <a href="{% url 'step_4' logbook.code %}">TO THE DRAWING BOARD (Step 4)</a> or
-              <a href="{% url 'step_6' logbook.code %}">OVER TO THE LAB(Step 6)</a> for some
+              <a href="{% url 'step_4' 1 2 %}">TO THE DRAWING BOARD (Step 4)</a> or
+              <a href="{% url 'step_6' 1 2 %}">OVER TO THE LAB(Step 6)</a> for some
               revisions to the prototype. Keep creating new versions of
               ModelI1…, ProtoI as needed so you can record all the iterations
               you did. Keep making changes to your prototype and try new
@@ -532,7 +532,7 @@
       <div class="row">
         <div class="col-12 d-flex align-items-center justify-content-center">
           <!-- Modified -->
-          <a href="{% url 'course_outline' logbook.code %}"
+          <a href="{% url 'course_outline' 1 2 %}"
             ><button class="btn btn-success mr-1" type="button">Back</button></a>
         </div>
       </div>
