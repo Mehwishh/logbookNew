@@ -10,7 +10,8 @@ def index(request):
 
 
 def course_outline(request, pk, sk):
-    return render(request, "website/outline.html")
+    context = {"pk": pk, "sk": sk}
+    return render(request, "website/outline.html", context)
 
 
 def record_of_invention(request, pk, sk):
@@ -37,20 +38,85 @@ def record_of_invention(request, pk, sk):
             )
             return redirect("statement_of_originality", pk, sk)
         return redirect("statement_of_originality", pk, sk)
-    context = {"record": record}
+    context = {"pk": pk, "sk": sk, "record": record}
     return render(request, "website/record_of_invention.html", context)
 
 
 def statement_of_originality(request, pk, sk):
+    statement = (
+        statementOfOriginality.objects.filter(teamId=sk)
+        .order_by("-date_updated")
+        .first()
+    )
     if request.method == "POST":
+        inventor1 = request.POST.get("inventor1")
+        schoolnamegrade1 = request.POST.get("schoolnamegrade1")
+        sig1 = request.POST.get("sig1")
+        date1 = request.POST.get("date1")
+
+        inventor2 = request.POST.get("inventor2")
+        schoolnamegrade2 = request.POST.get("schoolnamegrade2")
+        sig2 = request.POST.get("sig2")
+        date2 = request.POST.get("date2")
+
+        inventor3 = request.POST.get("inventor3")
+        schoolnamegrade3 = request.POST.get("schoolnamegrade3")
+        sig3 = request.POST.get("sig3")
+        date3 = request.POST.get("date3")
+
+        inventor4 = request.POST.get("inventor4")
+        schoolnamegrade4 = request.POST.get("schoolnamegrade4")
+        sig4 = request.POST.get("sig4")
+        date4 = request.POST.get("date4")
+
+        inventor5 = request.POST.get("inventor5")
+        schoolnamegrade5 = request.POST.get("schoolnamegrade5")
+        sig5 = request.POST.get("sig5")
+        date5 = request.POST.get("date5")
+
+        inventor6 = request.POST.get("inventor6")
+        schoolnamegrade6 = request.POST.get("schoolnamegrade6")
+        sig6 = request.POST.get("sig6")
+        date6 = request.POST.get("date6")
+
+        statementOfOriginality.objects.create(
+            userId=pk,
+            teamId=sk,
+            inventor1=inventor1,
+            schoolnamegrade1=schoolnamegrade1,
+            sig1=sig1,
+            date1=date1,
+            inventor2=inventor2,
+            schoolnamegrade2=schoolnamegrade2,
+            sig2=sig2,
+            date2=date2,
+            inventor3=inventor3,
+            schoolnamegrade3=schoolnamegrade3,
+            sig3=sig3,
+            date3=date3,
+            inventor4=inventor4,
+            schoolnamegrade4=schoolnamegrade4,
+            sig4=sig4,
+            date4=date4,
+            inventor5=inventor5,
+            schoolnamegrade5=schoolnamegrade5,
+            sig5=sig5,
+            date5=date5,
+            inventor6=inventor6,
+            schoolnamegrade6=schoolnamegrade6,
+            sig6=sig6,
+            date6=date6,
+        )
         return redirect("flowchart", pk, sk)
-    return render(request, "website/statement_of_originality.html")
+    context = {"pk": pk, "sk": sk, "statement": statement}
+    return render(request, "website/statement_of_originality.html", context)
 
 
 def flowchart(request, pk, sk):
     if request.method == "POST":
         return redirect("step_1", pk, sk)
-    return render(request, "website/flowchart.html")
+    context = {"pk": pk, "sk": sk}
+    return render(request, "website/flowchart.html",context)
 
 
 def step_1(request, pk, sk):
@@ -73,7 +139,7 @@ def step_1(request, pk, sk):
             )
             return redirect("step_2", pk, sk)
         return redirect("step_2", pk, sk)
-    context = {"step1": step1}
+    context = {"pk": pk, "sk": sk, "step1": step1}
     return render(request, "website/step_1.html", context)
 
 
@@ -192,7 +258,7 @@ def step_2(request, pk, sk):
             specific_solution=specific_solution,
         )
         return redirect("step_3", pk, sk)
-    context = {"step2": step2}
+    context = {"pk": pk, "sk": sk, "step2": step2}
     return render(request, "website/step_2.html", context)
 
 
@@ -226,7 +292,7 @@ def step_3(request, pk, sk):
             )
             return redirect("step_4", pk, sk)
         return redirect("step_4", pk, sk)
-    context = {"step3": step3}
+    context = {"pk": pk, "sk": sk, "step3": step3}
     return render(request, "website/step_3.html", context)
 
 
@@ -274,7 +340,7 @@ def step_4(request, pk, sk):
             green_sol=green_sol,
         )
         return redirect("step_5", pk, sk)
-    context = {"step4": step4}
+    context = {"pk": pk, "sk": sk, "step4": step4}
     return render(request, "website/step_4.html", context)
 
 
@@ -307,7 +373,7 @@ def step_5(request, pk, sk):
             )
             return redirect("step_6", pk, sk)
         return redirect("step_6", pk, sk)
-    context = {"step5": step5}
+    context = {"pk": pk, "sk": sk, "step5": step5}
     return render(request, "website/step_5.html", context)
 
 
@@ -323,7 +389,7 @@ def step_6(request, pk, sk):
                 notes=notes,
                 prototype_pic=prototype_pic,
             )
-            return redirect("step_6", pk, sk)
+            return redirect("step_7", pk, sk)
         elif notes != step6.notes or prototype_pic != step6.prototype_pic:
             stepSix.objects.create(
                 userId=pk,
@@ -333,24 +399,116 @@ def step_6(request, pk, sk):
             )
             return redirect("step_7", pk, sk)
         return redirect("step_7", pk, sk)
-    context = {"step6": step6}
+    context = {"pk": pk, "sk": sk, "step6": step6}
     return render(request, "website/step_6.html", context)
 
 
 def step_7(request, pk, sk):
-    return render(request, "website/step_7.html")
+    step7 = stepSeven.objects.filter(teamId=sk).order_by("-date_updated").first()
+    if request.method == "POST":
+        testing = request.POST.get("testing")
+        positive = request.POST.get("positive")
+        negative = request.POST.get("negative")
+        if step7 == None:
+            stepSeven.objects.create(
+                userId=pk,
+                teamId=sk,
+                testing=testing,
+                positive=positive,
+                negative=negative,
+            )
+            return redirect("step_8", pk, sk)
+        elif (
+            testing != step7.testing
+            or positive != step7.positive
+            or negative != step7.negative
+        ):
+            stepSeven.objects.create(
+                userId=pk,
+                teamId=sk,
+                testing=testing,
+                positive=positive,
+                negative=negative,
+            )
+            return redirect("step_8", pk, sk)
+        return redirect("step_8", pk, sk)
+    context = {"pk": pk, "sk": sk, "step7": step7}
+    return render(request, "website/step_7.html", context)
 
 
 def step_8(request, pk, sk):
-    return render(request, "website/step_8.html")
+    step8 = stepEight.objects.filter(teamId=sk).order_by("-date_updated").first()
+    if request.method == "POST":
+        nameinvention = request.POST.get("nameinvention")
+        benefits = request.POST.get("benefits")
+        price = request.POST.get("price")
+        customer_age = request.POST.get("customer_age")
+        customer_gender = request.POST.get("customer_gender")
+        customer_education = request.POST.get("customer_education")
+        customer_house = request.POST.get("customer_house")
+        customer_marital = request.POST.get("customer_marital")
+        other_notes = request.POST.get("other_notes")
+        stepEight.objects.create(
+            userId=pk,
+            teamId=sk,
+            nameinvention=nameinvention,
+            benefits=benefits,
+            price=price,
+            customer_age=customer_age,
+            customer_gender=customer_gender,
+            customer_education=customer_education,
+            customer_house=customer_house,
+            customer_marital=customer_marital,
+            other_notes=other_notes,
+        )
+        return redirect("survey", pk, sk)
+    context = {"pk": pk, "sk": sk, "step8": step8}
+    return render(request, "website/step_8.html", context)
 
 
 def survey(request, pk, sk):
-    return HttpResponse("survey")
+    survey = surveyLogbook.objects.filter(teamId=sk).order_by("-date_updated").first()
+    if request.method == "POST":
+        things_enjoyed = request.POST.get("things_enjoyed")
+        thanking = request.POST.get("thanking")
+        difficulty = request.POST.get("difficulty")
+        future = request.POST.get("future")
+        if survey == None:
+            surveyLogbook.objects.create(
+                userId=pk,
+                teamId=sk,
+                things_enjoyed=things_enjoyed,
+                thanking=thanking,
+                difficulty=difficulty,
+                future=future,
+            )
+            return redirect("notes", pk, sk)
+        elif (
+            things_enjoyed != survey.things_enjoyed
+            or thanking != survey.thanking
+            or difficulty != survey.difficulty
+            or future != survey.future
+        ):
+            surveyLogbook.objects.create(
+                userId=pk,
+                teamId=sk,
+                things_enjoyed=things_enjoyed,
+                thanking=thanking,
+                difficulty=difficulty,
+                future=future,
+            )
+            return redirect("notes", pk, sk)
+        return redirect("notes", pk, sk)
+    context = {"pk": pk, "sk": sk, "survey": survey}
+    return render(request, "website/survey.html", context)
 
 
 def notes(request, pk, sk):
-    return HttpResponse("notes")
+    context = {
+        "pk": pk,
+        "sk": sk,
+    }
+    return render(request, "website/notes.html", context)
 
 
 def preview_logbook(request, pk, sk):

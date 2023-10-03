@@ -10,391 +10,433 @@
 </nav>
 <!-- second header ends  -->
 <!-- Question Answeer Box -->
-
 <div class="QA_container mb-1 p-5">
-  <h1
-    class="mb-3"
-    style="
+  <h1 class="mb-3" style="
       color: green;
       text-align: justify;
       font-size: 1em;
     ">
     <i>We certify that to the best of our knowledge, the ideas and the work
-        described in this log have resulted from the work of the team signing
-        off from here.</i>
+      described in this log have resulted from the work of the team signing
+      off from here.</i>
   </h1>
   <br />
-  <br />
-  <form method="post">
-    {% csrf_token %}
-    <div class="form-group">
-      <div class="row mt-2">
-        <div class="col-md-6">
-          <label class="labels">
-            <h1
-              class="mb-3"
-              style="
-                font-family: 'Times New Roman', Times, serif;
-                color: dark green;
-                text-align: center;
-                font-size: 1.4em;
-              "
-            >
-              <b>The Inventor</b>
-            </h1>
-          </label>
-          <input
-            type="text"
-            class="form-control"
-            placeholder="Enter here"
-            value="{{logbook.inventor}}"
-            name="inventor"
-            
-          />
-        </div>
-        <div class="col-md-6">
-          <label class="labels">
-            <h1
-              class="mb-3"
-              style="
-                font-family: 'Times New Roman', Times, serif;
-                color: dark green;
-                text-align: center;
-                font-size: 1.4em;
-              "
-            >
-              <b>School Name & Grade</b>
-            </h1>
-          </label>
-          <input
-            type="text"
-            class="form-control"
-            value="{{logbook.schoolnamegrade}}"
-            placeholder="Enter here"
-            name="schoolnamegrade"
-            
-          />
-        </div>
-        
-        <div class="col-md-6">
-          <label class="labels">
-            <h1
-            class="mb-3"
-            style="
-                font-family: 'Times New Roman', Times, serif;
-                color: dark green;
-                text-align: center;
-                font-size: 1.4em;
-              "
-            >
-              <b>Member 2</b>
-            </h1>
-          </label>
-          <input
-          type="text"
-          class="form-control"
-          value="{{logbook.member2}}"
-          placeholder="Enter here"
-          name="member2"
-          
-          />
-        </div>
-        <div class="col-md-6">
-          <label class="labels">
-            <h1
-              class="mb-3"
-              style="
-                font-family: 'Times New Roman', Times, serif;
-                color: dark green;
-                text-align: center;
-                font-size: 1.4em;
-              "
-            >
-              <b>School Name & Grade</b>
-            </h1>
-          </label>
-          <input
-            type="text"
-            class="form-control"
-            value="{{logbook.schoolnamegrade2}}"
-            placeholder="Enter here"
-            name="schoolnamegrade2"
-            
-          />
-        </div>
-        <div class="col-md-6">
-          <label class="labels">
-            <h1
-            class="mb-3"
-              style="
-                font-family: 'Times New Roman', Times, serif;
-                color: dark green;
-                text-align: center;
-                font-size: 1.4em;
-              "
-            >
-              <b>Member 3</b>
-            </h1>
-          </label>
-          <input
-            type="text"
-            class="form-control"
-            value="{{logbook.member3}}"
-            placeholder="Enter here"
-            name="member3"
-            
-          />
-        </div>
-        <div class="col-md-6">
-          <label class="labels">
-            <h1
-              class="mb-3"
-              style="
-                font-family: 'Times New Roman', Times, serif;
-                color: dark green;
-                text-align: center;
-                font-size: 1.4em;
-              "
-            >
-              <b>School Name & Grade</b>
-            </h1>
-          </label>
-          <input
-            type="text"
-            class="form-control"
-            value="{{logbook.schoolnamegrade3}}"
-            placeholder="Enter here"
-            name="schoolnamegrade3"
-            
-          />
-        </div>
-        <div class="col-md-6">
-          <label class="labels">
-            <h1
-              class="mb-3"
-              style="
-                font-family: 'Times New Roman', Times, serif;
-                color: dark green;
-                text-align: center;
-                font-size: 1.4em;
-              "
-            >
-              <b>Member 4</b>
-            </h1>
-          </label>
-          <input
-            type="text"
-            class="form-control"
-            value="{{logbook.member4}}"
-            placeholder="Enter here"
-            name="member4"
-            
-          />
-        </div>
-        <div class="col-md-6">
-          <label class="labels">
-            <h1
-              class="mb-3"
-              style="
-                font-family: 'Times New Roman', Times, serif;
-                color: dark green;
-                text-align: center;
-                font-size: 1.4em;
-              "
-            >
-              <b>School Name & Grade</b>
-            </h1>
-          </label>
-          <input
-            type="text"
-            class="form-control"
-            value="{{logbook.schoolnamegrade4}}"
-            placeholder="Enter here"
-            name="schoolnamegrade4"
-            
-          />
-        </div>
-        <div class="col-md-6">
-          <label class="labels">
-            <h1
-              class="mb-3"
-              style="
-                font-family: 'Times New Roman', Times, serif;
-                color: dark green;
-                text-align: center;
-                font-size: 1.4em;
-              "
-            >
-              <b>Member 5</b>
-            </h1>
-          </label>
-          <input
-            type="text"
-            class="form-control"
-            value="{{logbook.member5}}"
-            placeholder="Enter here"
-            name="member5"
-            
-          />
-        </div>
-        <div class="col-md-6">
-          <label class="labels">
-            <h1
-              class="mb-3"
-              style="
-                font-family: 'Times New Roman', Times, serif;
-                color: dark green;
-                text-align: center;
-                font-size: 1.4em;
-              "
-            >
-              <b>School Name & Grade</b>
-            </h1>
-          </label>
-          <input
-            type="text"
-            class="form-control"
-            value="{{logbook.schoolnamegrade5}}"
-            placeholder="Enter here"
-            name="schoolnamegrade5"
-            
-          />
-        </div>
-        <div class="col-md-6">
-          <label class="labels">
-            <h1
-              class="mb-3"
-              style="
-                font-family: 'Times New Roman', Times, serif;
-                color: dark green;
-                text-align: center;
-                font-size: 1.4em;
-              "
-            >
-              <b>Member 6</b>
-            </h1>
-          </label>
-          <input
-            type="text"
-            class="form-control"
-            value="{{logbook.member6}}"
-            placeholder="Enter here"
-            name="member6"
-            
-          />
-        </div>
-        <div class="col-md-6">
-          <label class="labels">
-            <h1
-              class="mb-3"
-              style="
-                font-family: 'Times New Roman', Times, serif;
-                color: dark green;
-                text-align: center;
-                font-size: 1.4em;
-              "
-            >
-              <b>School Name & Grade</b>
-            </h1>
-          </label>
-          <input
-            type="text"
-            class="form-control"
-            value="{{logbook.schoolnamegrade6}}"
-            placeholder="Enter here"
-            name="schoolnamegrade6"
-            
-          />
-        </div>
-        <div class="col-md-6">
-          <label class="labels">
-            <h1
-              class="mb-3"
-              style="
-                font-family: 'Times New Roman', Times, serif;
-                color: dark green;
-                text-align: center;
-                font-size: 1.4em;
-              "
-            >
-              <b>Signatures</b>
-            </h1>
-          </label>
-          <input
-            type="text"
-            class="form-control"
-            placeholder="Member 1"
-            value="{{logbook.sig1}}"
-            name="sig1"
-            
-          />
-          <br />
-          <input
-            type="text"
-            class="form-control"
-            placeholder="Member 3"
-            value="{{logbook.sig3}}"
-            name="sig3"
-          />
-          <br/>
-          <input
-            type="text"
-            class="form-control"
-            placeholder="Member 5"
-            value="{{logbook.sig5}}"
-            name="sig5"
-          />
-        </div>
-        <div class="col-md-6">
-          <label class="labels">
-            <h1
-              class="mb-3"
-              style="
-                font-family: 'Times New Roman', Times, serif;
-                color: white;
-                text-align: center;
-                font-size: 1.4em;
-              "
-            >
-              <b>&nbsp;</b>
-            </h1>
-          </label>
-          <input
-            type="text"
-            class="form-control"
-            value="{{logbook.sig2}}"
-            placeholder="Member 2"
-            name="sig2"
-          />
-          <br />
-          <input
-            type="text"
-            class="form-control"
-            placeholder="Member 4"
-            value="{{logbook.sig4}}"
-            name="sig4"
-          />
-          <br />
-          <input
-            type="text"
-            class="form-control"
-            placeholder="Member 6"
-            value="{{logbook.sig6}}"
-            name="sig6"
-          />
-        </div>
+  <br /><br>
+<!-- 1 -->
+  <div class="row">
+    <!-- First Row -->
+    <div class="col-md-6">
+      <form method="post">
+        {% csrf_token %}
+      <label class="labels">
+        <h1 class="mb-3" style="
+            font-family: 'Times New Roman', Times, serif;
+            color: dark green;
+            text-align: center;
+            font-size: 1.4em;
+          ">
+          <b>Inventor Name</b>
+        </h1>
+      </label>
+      <input type="text" class="form-control" placeholder="Sohani" value="{{statement.inventor1}}" name="inventor1"
+         />
+    </div>
+    <div class="col-md-6">
+      <label class="labels">
+        <h1 class="mb-3" style="
+            font-family: 'Times New Roman', Times, serif;
+            color: dark green;
+            text-align: center;
+            font-size: 1.4em;
+          ">
+          <b>School Name & Grade</b>
+        </h1>
+      </label>
+      <input type="text" class="form-control" value="{{statement.schoolnamegrade1}}" placeholder="Saline High School(11)"
+        name="schoolnamegrade1"  />
+    </div>
+  </div>
+
+  <div class="row">
+    <!-- Second Row -->
+    <div class="col-md-6">
+      <!-- Signature Field -->
+      <div class="mb-3">
+        <label class="labels">
+          <h1 class="mb-3" style="
+            font-family: 'Times New Roman', Times, serif;
+            color: dark green;
+            text-align: center;
+            font-size: 1.4em;
+          ">
+            <b>Signature</b>
+          </h1>
+        </label>
+        <input type="text" class="form-control" value="{{statement.sig1}}" name="sig1" />
       </div>
     </div>
-    <br>
-    
+    <div class="col-md-6">
+      <!-- Date Field -->
+      <div class="mb-3">
+        <label class="labels">
+          <h1 class="mb-3" style="
+            font-family: 'Times New Roman', Times, serif;
+            color: dark green;
+            text-align: center;
+            font-size: 1.4em;
+          ">
+            <b>Date</b>
+          </h1>
+        </label>
+        <input type="date" class="form-control" id="dateField" name="date1" value="{{statement.date1}}">
+      </div>
+    </div>
+  </div>
+ <br><br> <br>
+ <!-- 2 -->
+  <div class="row">
+    <!-- First Row -->
+    <div class="col-md-6">
+      <label class="labels">
+        <h1 class="mb-3" style="
+              font-family: 'Times New Roman', Times, serif;
+              color: dark green;
+              text-align: center;
+              font-size: 1.4em;
+            ">
+          <b>Inventor Name</b>
+        </h1>
+      </label>
+          <input type="text" class="form-control" value="{{statement.inventor2}}"  name="inventor2" />
+    </div>
+    <div class="col-md-6">
+      <label class="labels">
+        <h1 class="mb-3" style="
+              font-family: 'Times New Roman', Times, serif;
+              color: dark green;
+              text-align: center;
+              font-size: 1.4em;
+            ">
+          <b>School Name & Grade</b>
+        </h1>
+      </label>
+          <input type="text" class="form-control" value="{{statement.schoolnamegrade2}}" 
+            name="schoolnamegrade2" />
+    </div>
+  </div>
+  
+  <div class="row">
+    <!-- Second Row -->
+    <div class="col-md-6">
+      <!-- Signature Field -->
+      <div class="mb-3">
+        <label class="labels">
+          <h1 class="mb-3" style="
+              font-family: 'Times New Roman', Times, serif;
+              color: dark green;
+              text-align: center;
+              font-size: 1.4em;
+            ">
+            <b>Signature</b>
+          </h1>
+        </label>
+              <input type="text" class="form-control" value="{{statement.sig2}}"  name="sig2" /> </div>
+    </div>
+    <div class="col-md-6">
+      <!-- Date Field -->
+      <div class="mb-3">
+        <label class="labels">
+          <h1 class="mb-3" style="
+              font-family: 'Times New Roman', Times, serif;
+              color: dark green;
+              text-align: center;
+              font-size: 1.4em;
+            ">
+            <b>Date</b>
+          </h1>
+        </label>
+        <input type="date" class="form-control" id="dateField" name="date2" value="{{statement.date2}}">
+      </div>
+    </div>
+  </div>
+  <br><br><br>
+  <!-- 3 -->
+  <div class="row">
+    <!-- First Row -->
+    <div class="col-md-6">
+      <label class="labels">
+        <h1 class="mb-3" style="
+              font-family: 'Times New Roman', Times, serif;
+              color: dark green;
+              text-align: center;
+              font-size: 1.4em;
+            ">
+          <b>Inventor Name</b>
+        </h1>
+      </label>
+          <input type="text" class="form-control" value="{{statement.inventor3}}"  name="inventor3" />
+    </div>
+    <div class="col-md-6">
+      <label class="labels">
+        <h1 class="mb-3" style="
+              font-family: 'Times New Roman', Times, serif;
+              color: dark green;
+              text-align: center;
+              font-size: 1.4em;
+            ">
+          <b>School Name & Grade</b>
+        </h1>
+      </label>
+          <input type="text" class="form-control" value="{{statement.schoolnamegrade3}}" 
+            name="schoolnamegrade3" />
+    </div>
+  </div>
+  
+  <div class="row">
+    <!-- Second Row -->
+    <div class="col-md-6">
+      <!-- Signature Field -->
+      <div class="mb-3">
+        <label class="labels">
+          <h1 class="mb-3" style="
+              font-family: 'Times New Roman', Times, serif;
+              color: dark green;
+              text-align: center;
+              font-size: 1.4em;
+            ">
+            <b>Signature</b>
+          </h1>
+        </label>
+          <input type="text" class="form-control"  value="{{statement.sig3}}" name="sig3" />      </div>
+    </div>
+    <div class="col-md-6">
+      <!-- Date Field -->
+      <div class="mb-3">
+        <label class="labels">
+          <h1 class="mb-3" style="
+              font-family: 'Times New Roman', Times, serif;
+              color: dark green;
+              text-align: center;
+              font-size: 1.4em;
+            ">
+            <b>Date</b>
+          </h1>
+        </label>      
+        <input type="date" class="form-control" id="dateField" name="date3" value="{{statement.date3}}">
+      </div>
+    </div>
+  </div>
+  <br><br><br>
+  <!-- 4 -->
+  <div class="row">
+    <!-- First Row -->
+    <div class="col-md-6">
+      <label class="labels">
+        <h1 class="mb-3" style="
+                font-family: 'Times New Roman', Times, serif;
+                color: dark green;
+                text-align: center;
+                font-size: 1.4em;
+              ">
+          <b>Inventor Name</b>
+        </h1>
+      </label>
+      <input    type="text"
+            class="form-control"
+            value="{{statement.inventor4}}"
+            
+            name="inventor4"/>
+    </div>
+    <div class="col-md-6">
+      <label class="labels">
+        <h1 class="mb-3" style="
+                font-family: 'Times New Roman', Times, serif;
+                color: dark green;
+                text-align: center;
+                font-size: 1.4em;
+              ">
+          <b>School Name & Grade</b>
+        </h1>
+      </label>
+          <input type="text" class="form-control" value="{{statement.schoolnamegrade4}}" 
+            name="schoolnamegrade4" />
+    </div>
+  </div>
+  
+  <div class="row">
+    <!-- Second Row -->
+    <div class="col-md-6">
+      <!-- Signature Field -->
+      <div class="mb-3">
+        <label class="labels">
+          <h1 class="mb-3" style="
+                font-family: 'Times New Roman', Times, serif;
+                color: dark green;
+                text-align: center;
+                font-size: 1.4em;
+              ">
+            <b>Signature</b>
+          </h1>
+        </label>
+          <input type="text" class="form-control" value="{{statement.sig4}}" name="sig4" />      </div>
+    </div>
+    <div class="col-md-6">
+      <!-- Date Field -->
+      <div class="mb-3">
+        <label class="labels">
+          <h1 class="mb-3" style="
+                font-family: 'Times New Roman', Times, serif;
+                color: dark green;
+                text-align: center;
+                font-size: 1.4em;
+              ">
+            <b>Date</b>
+          </h1>
+        </label>
+        <input type="date" class="form-control" id="dateField" name="date4" value="{{statement.date4}}">
+      </div>
+    </div>
+  </div>
+  <br><br><br>
+  <!-- 5 -->
+  <div class="row">
+    <!-- First Row -->
+    <div class="col-md-6">
+      <label class="labels">
+        <h1 class="mb-3" style="
+                font-family: 'Times New Roman', Times, serif;
+                color: dark green;
+                text-align: center;
+                font-size: 1.4em;
+              ">
+          <b>Inventor Name</b>
+        </h1>
+      </label>
+          <input type="text" class="form-control" value="{{statement.inventor5}}"  name="inventor5" />
+    </div>
+    <div class="col-md-6">
+      <label class="labels">
+        <h1 class="mb-3" style="
+                font-family: 'Times New Roman', Times, serif;
+                color: dark green;
+                text-align: center;
+                font-size: 1.4em;
+              ">
+          <b>School Name & Grade</b>
+        </h1>
+      </label>
+          <input type="text" class="form-control" value="{{statement.schoolnamegrade5}}" 
+            name="schoolnamegrade5" />
+    </div>
+  </div>
+  
+  <div class="row">
+    <!-- Second Row -->
+    <div class="col-md-6">
+      <!-- Signature Field -->
+      <div class="mb-3">
+        <label class="labels">
+          <h1 class="mb-3" style="
+                font-family: 'Times New Roman', Times, serif;
+                color: dark green;
+                text-align: center;
+                font-size: 1.4em;
+              ">
+            <b>Signature</b>
+          </h1>
+        </label>
+          <input type="text" class="form-control"  value="{{statement.sig5}}" name="sig5" />      </div>
+    </div>
+    <div class="col-md-6">
+      <!-- Date Field -->
+      <div class="mb-3">
+        <label class="labels">
+          <h1 class="mb-3" style="
+                font-family: 'Times New Roman', Times, serif;
+                color: dark green;
+                text-align: center;
+                font-size: 1.4em;
+              ">
+            <b>Date</b>
+          </h1>
+        </label>
+        <input type="date" class="form-control" id="dateField" name="date5" value="{{statement.date5}}">
+      </div>
+    </div>
+  </div><br><br> <br>
+  <div class="row">
+    <!-- First Row -->
+    <div class="col-md-6">
+      <label class="labels">
+        <h1 class="mb-3" style="
+              font-family: 'Times New Roman', Times, serif;
+              color: dark green;
+              text-align: center;
+              font-size: 1.4em;
+            ">
+          <b>Inventor Name</b>
+        </h1>
+      </label>
+          <input type="text" class="form-control" value="{{statement.inventor6}}" name="inventor6" />
+    </div>
+    <div class="col-md-6">
+      <label class="labels">
+        <h1 class="mb-3" style="
+              font-family: 'Times New Roman', Times, serif;
+              color: dark green;
+              text-align: center;
+              font-size: 1.4em;
+            ">
+          <b>School Name & Grade</b>
+        </h1>
+      </label>
+          <input type="text" class="form-control" value="{{statement.schoolnamegrade6}}" 
+            name="schoolnamegrade6" />
+    </div>
+  </div>
+  
+  <div class="row">
+    <!-- Second Row -->
+    <div class="col-md-6">
+      <!-- Signature Field -->
+      <div class="mb-3">
+        <label class="labels">
+          <h1 class="mb-3" style="
+              font-family: 'Times New Roman', Times, serif;
+              color: dark green;
+              text-align: center;
+              font-size: 1.4em;
+            ">
+            <b>Signature</b>
+          </h1>
+        </label>
+          <input type="text" class="form-control"  value="{{statement.sig6}}" name="sig6" />      </div>
+    </div>
+    <div class="col-md-6">
+      <!-- Date Field -->
+      <div class="mb-3">
+        <label class="labels">
+          <h1 class="mb-3" style="
+              font-family: 'Times New Roman', Times, serif;
+              color: dark green;
+              text-align: center;
+              font-size: 1.4em;
+            ">
+            <b>Date</b>
+          </h1>
+        </label>      
+        <input type="date" class="form-control" id="dateField" name="date6" value="{{statement.date6}}" >
+      </div>
+    </div>
+  </div>
+</div>
     <!-- Question Answeer Box  Ends-->
     <!-- Buttons-->
-
     <div class="container">
       <div class="row">
         <div class="col-6 d-flex align-items-center justify-content-start">
           <button class="btn btn-success mr-1" type="button">
-            <a href="{% url 'record_of_invention' 1 2 %}">Back</a>
+            <a href="{% url 'record_of_invention' pk sk %}">Back</a>
           </button>
           {% include 'website/buttons.html' %}
         </form>

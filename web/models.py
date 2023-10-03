@@ -15,6 +15,45 @@ class recordOfInvention(models.Model):
         return str(self.teamId)
 
 
+class statementOfOriginality(models.Model):
+    userId = models.IntegerField()
+    teamId = models.IntegerField()
+    date_updated = models.DateTimeField(auto_now_add=True)
+
+    inventor1 = models.CharField(max_length=1200, default="")
+    schoolnamegrade1 = models.CharField(max_length=1200, default="")
+    sig1 = models.CharField(max_length=1200, default="")
+    date1 = models.CharField(max_length=1200, default="")
+
+    inventor2 = models.CharField(max_length=1200, default="")
+    schoolnamegrade2 = models.CharField(max_length=1200, default="")
+    sig2 = models.CharField(max_length=1200, default="")
+    date2 = models.CharField(max_length=1200, default="")
+
+    inventor3 = models.CharField(max_length=1200, default="")
+    schoolnamegrade3 = models.CharField(max_length=1200, default="")
+    sig3 = models.CharField(max_length=1200, default="")
+    date3 = models.CharField(max_length=1200, default="")
+
+    inventor4 = models.CharField(max_length=1200, default="")
+    schoolnamegrade4 = models.CharField(max_length=1200, default="")
+    sig4 = models.CharField(max_length=1200, default="")
+    date4 = models.CharField(max_length=1200, default="")
+
+    inventor5 = models.CharField(max_length=1200, default="")
+    schoolnamegrade5 = models.CharField(max_length=1200, default="")
+    sig5 = models.CharField(max_length=1200, default="")
+    date5 = models.CharField(max_length=1200, default="")
+
+    inventor6 = models.CharField(max_length=1200, default="")
+    schoolnamegrade6 = models.CharField(max_length=1200, default="")
+    sig6 = models.CharField(max_length=1200, default="")
+    date6 = models.CharField(max_length=1200, default="")
+
+    def __str__(self):
+        return str(self.teamId)
+
+
 class stepOne(models.Model):
     userId = models.IntegerField()
     teamId = models.IntegerField()
@@ -148,7 +187,8 @@ class stepFive(models.Model):
 
     def __str__(self):
         return str(self.teamId)
-    
+
+
 class stepSix(models.Model):
     userId = models.IntegerField()
     teamId = models.IntegerField()
@@ -156,6 +196,52 @@ class stepSix(models.Model):
 
     notes = models.CharField(max_length=1200, default="")
     prototype_pic = models.ImageField(null=True, blank=True)
-    
+
+    def __str__(self):
+        return str(self.teamId)
+
+
+class stepSeven(models.Model):
+    userId = models.IntegerField()
+    teamId = models.IntegerField()
+    date_updated = models.DateTimeField(auto_now_add=True)
+
+    testing = models.CharField(max_length=1200, default="")
+    positive = models.CharField(max_length=1200, default="")
+    negative = models.CharField(max_length=1200, default="")
+
+    def __str__(self):
+        return str(self.teamId)
+
+
+class stepEight(models.Model):
+    userId = models.IntegerField()
+    teamId = models.IntegerField()
+    date_updated = models.DateTimeField(auto_now_add=True)
+
+    nameinvention = models.CharField(max_length=1200, default="")
+    benefits = models.CharField(max_length=1200, default="")
+    price = models.CharField(max_length=1200, default="")
+    customer_age = models.CharField(max_length=1200, default="")
+    customer_gender = models.CharField(max_length=1200, default="")
+    customer_education = models.CharField(max_length=1200, default="")
+    customer_house = models.CharField(max_length=1200, default="")
+    customer_marital = models.CharField(max_length=1200, default="")
+    other_notes = models.CharField(max_length=1200, default="")
+
+    def __str__(self):
+        return str(self.teamId)
+
+
+class surveyLogbook(models.Model):
+    userId = models.IntegerField()
+    teamId = models.IntegerField()
+    date_updated = models.DateTimeField(auto_now_add=True)
+
+    things_enjoyed = models.CharField(max_length=1200, default="")
+    thanking = models.CharField(max_length=1200, default="")
+    difficulty = models.CharField(max_length=1200, default="")
+    future = models.CharField(max_length=1200, default="")
+
     def __str__(self):
         return str(self.teamId)

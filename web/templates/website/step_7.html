@@ -22,7 +22,7 @@
         rows="8"
         placeholder="Your Answer"
         name="testing"
-      >{{logbook.testing}}</textarea>
+      >{{step7.testing}}</textarea>
     </div><br>
     <h1>Now, test your prototype</h1>
     <br>
@@ -41,7 +41,7 @@
         rows="5"
         placeholder="Write here"
         name="positive"
-      >{{logbook.positive}}</textarea>
+      >{{step7.positive}}</textarea>
     </div>
     <div>
       <div class="form-group">
@@ -53,13 +53,13 @@
           rows="5"
           placeholder="Write here"
           name="negative"
-        >{{logbook.negative}}</textarea>
+        >{{step7.negative}}</textarea>
       </div>
     </div><br>
           <label class="form-label" for="inputlg">
                   At this point, consider if you need to go back
-                  <a href="{% url 'step_4' 1 2 %}">TO THE DRAWING BOARD (Step 4)</a> or
-                  <a href="{% url 'step_6' 1 2 %}">OVER TO THE LAB(Step 6)</a> for some revisions to
+                  <a href="{% url 'step_4' pk sk %}">TO THE DRAWING BOARD (Step 4)</a> or
+                  <a href="{% url 'step_6' pk sk %}">OVER TO THE LAB(Step 6)</a> for some revisions to
                   the prototype. Keep creating new versions of Model prototype as needed
                   so you can record all the iterations you did. Keep making changes to
                   your prototype and try new iterations until your invention works as
@@ -71,7 +71,7 @@
   <div class="row">
     <div class="col-6 d-flex align-items-center justify-content-start">
       <button class="btn btn-success mr-1" type="button">
-        <a href="{% url 'step_6' 1 2 %}">Back</a>
+        <a href="{% url 'step_6' pk sk %}">Back</a>
       </button>
       {% include 'website/buttons.html' %}
 <!-- Buttons ends-->

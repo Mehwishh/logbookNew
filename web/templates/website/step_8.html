@@ -39,7 +39,7 @@
         "
         placeholder="Your Answer"
         name="nameinvention"
-      >{{logbook.nameinvention}}</textarea>
+      >{{step8.nameinvention}}</textarea>
     </div>
     <div class="form-group">
       <label class="form-label" for="inputlg">
@@ -57,7 +57,7 @@
         "
         placeholder="Your Answer"
         name="benefits"
-      >{{logbook.benefits}}</textarea>
+      >{{step8.benefits}}</textarea>
     </div>
     <div class="form-group">
       <label class="form-label" for="inputlg"
@@ -75,7 +75,7 @@
         "
         placeholder="Your Answer"
         name="price"
-      >{{logbook.price}}</textarea>
+      >{{step8.price}}</textarea>
     </div>
     <div class="form-group">
       <label class="form-label" for="inputlg"
@@ -91,7 +91,7 @@
         "
         placeholder="Your Answer"
         name="buy"
-      >{{logbook.buy}}</textarea>
+      >{{step8.buy}}</textarea>
     </div>
     <div class="form-group">
         <label class="form-label" for="inputlg"
@@ -104,7 +104,7 @@
               type="text"
               class="form-control"
               placeholder="Enter age"
-              value="{{logbook.customer_age}}"
+              value="{{step8.customer_age}}"
               name="customer_age"
             />
           </div>
@@ -114,7 +114,7 @@
               type="text"
               class="form-control"
               placeholder="Enter gender"
-              value="{{logbook.customer_gender}}"
+              value="{{step8.customer_gender}}"
               name="customer_gender"
             />
           </div>
@@ -124,7 +124,7 @@
               type="text"
               class="form-control"
               placeholder="Enter education level:"
-              value="{{logbook.customer_education}}"
+              value="{{step8.customer_education}}"
               name="customer_education"
             />
           </div>
@@ -134,7 +134,7 @@
               type="text"
               class="form-control"
               placeholder="Enter household size:"
-              value="{{logbook.customer_house}}"
+              value="{{step8.customer_house}}"
               name="customer_house"
             />
           </div>
@@ -144,7 +144,7 @@
               type="text"
               class="form-control"
               placeholder="Enter marital status:"
-              value="{{logbook.customer_marital}}"
+              value="{{step8.customer_marital}}"
               name="customer_marital"
             />
           </div>
@@ -157,7 +157,7 @@
         rows="3"
         placeholder="Write here"
         name="other_notes"
-      >{{logbook.other_notes}}</textarea>
+      >{{step8.other_notes}}</textarea>
     </div>
     <!-- Buttons-->
 
@@ -165,7 +165,7 @@
   <div class="row">
     <div class="col-6 d-flex align-items-center justify-content-start">
       <button class="btn btn-success mr-1" type="button">
-        <a href="{% url 'step_7' 1 2 %}">Back</a>
+        <a href="{% url 'step_7' pk sk %}">Back</a>
       </button>
       {% include 'website/buttons.html' %}
 <!-- Buttons ends-->

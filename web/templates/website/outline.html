@@ -3,17 +3,16 @@
 <nav class="navbars">
   <div class="container-fluid-nav text-center">
     <h5>COURSE OUTLINE</h5>
-    <h5>{{logbook.title}}</h5>
+    <h5>{{pk}}</h5>
   </div>
 </nav>
-{% include 'website/messages.html' %}
 <!-- second header ends  -->
 <!-- COURSE OUTLINE BOX -->
 <div class="py-5 text-center">
   <div class="container">
     <div class="row">
       <div class="mx-auto col-md-10" style="padding: 1px">
-        <a href="{% url 'record_of_invention' 1 2 %}">
+        <a href="{% url 'record_of_invention' pk sk %}">
           <button
             style="border-radius: 20px; border-color: gray; color: darkgreen"
             class="btn btn-lg btn-light w-100 fs-6"
@@ -22,7 +21,7 @@
           </button>
         </a>
         <br /><br />
-        <a href="{% url 'statement_of_originality' 1 2 %}">
+        <a href="{% url 'statement_of_originality' pk sk %}">
           <!-- Add link of statemnt of originality-->
           <button
             style="border-radius: 20px; border-color: gray; color: darkgreen"
@@ -32,7 +31,7 @@
           </button>
         </a>
         <br /><br />
-        <a href="{% url 'flowchart' 1 2 %}">
+        <a href="{% url 'flowchart' pk sk %}">
           <button
             style="border-radius: 20px; border-color: gray; color: darkgreen"
             class="btn btn-lg btn-light w-100 fs-6"
@@ -41,7 +40,7 @@
           </button>
         </a>
         <br /><br />
-        <a href="{% url 'step_1' 1 2 %}">
+        <a href="{% url 'step_1' pk sk %}">
           <button
             style="border-radius: 20px; border-color: gray; color: darkgreen"
             class="btn btn-lg btn-light w-100 fs-6"
@@ -50,7 +49,7 @@
           </button>
         </a>
         <br /><br />
-        <a href="{% url 'step_2' 1 2 %}">
+        <a href="{% url 'step_2' pk sk %}">
           <button
             style="border-radius: 20px; border-color: gray; color: darkgreen"
             class="btn btn-lg btn-light w-100 fs-6"
@@ -59,7 +58,7 @@
           </button>
         </a>
         <br /><br />
-        <a href="{% url 'step_3' 1 2 %}">
+        <a href="{% url 'step_3' pk sk %}">
           <button
             style="border-radius: 20px; border-color: gray; color: darkgreen"
             class="btn btn-lg btn-light w-100 fs-6"
@@ -68,7 +67,7 @@
           </button>
         </a>
         <br /><br />
-        <a href="{% url 'step_4' 1 2 %}">
+        <a href="{% url 'step_4' pk sk %}">
           <button
             style="border-radius: 20px; border-color: gray; color: darkgreen"
             class="btn btn-lg btn-light w-100 fs-6"
@@ -77,7 +76,7 @@
           </button>
         </a>
         <br /><br />
-        <a href="{% url 'step_5' 1 2 %}">
+        <a href="{% url 'step_5' pk sk %}">
           <button
             style="border-radius: 20px; border-color: gray; color: darkgreen"
             class="btn btn-lg btn-light w-100 fs-6"
@@ -86,7 +85,7 @@
           </button>
         </a>
         <br /><br />
-        <a href="{% url 'step_6' 1 2 %}">
+        <a href="{% url 'step_6' pk sk %}">
           <button
             style="border-radius: 20px; border-color: gray; color: darkgreen"
             class="btn btn-lg btn-light w-100 fs-6"
@@ -95,7 +94,7 @@
           </button>
         </a>
         <br /><br />
-        <a href="{% url 'step_7' 1 2 %}">
+        <a href="{% url 'step_7' pk sk %}">
           <button
             style="border-radius: 20px; border-color: gray; color: darkgreen"
             class="btn btn-lg btn-light w-100 fs-6"
@@ -105,7 +104,7 @@
         </a>
         <br />
         <br />
-        <a href="{% url 'step_8' 1 2 %}">
+        <a href="{% url 'step_8' pk sk %}">
           <button
             style="border-radius: 20px; border-color: gray; color: darkgreen"
             class="btn btn-lg btn-light w-100 fs-6"
@@ -114,7 +113,7 @@
           </button>
         </a>
         <br /><br />
-        <a href="{% url 'survey' 1 2 %}">
+        <a href="{% url 'survey' pk sk %}">
           <button
             style="border-radius: 20px; border-color: gray; color: darkgreen"
             class="btn btn-lg btn-light w-100 fs-6"
@@ -123,7 +122,7 @@
           </button>
         </a>
         <br /><br />
-        <a href="{% url 'notes' 1 2 %}">
+        <a href="{% url 'notes' pk sk %}">
           <button
             style="border-radius: 20px; border-color: gray; color: darkgreen"
             class="btn btn-lg btn-light w-100 fs-6"
@@ -137,7 +136,7 @@
     <!-- Buttons-->
     <div class="container">
       <button class="btn btn-success mt-2" type="button">
-        <a href="{% url 'record_of_invention' 1 2 %}">Next</a>
+        <a href="{% url 'record_of_invention' pk sk %}">Next</a>
       </button>
     </div>
     <!-- Buttons ends-->
