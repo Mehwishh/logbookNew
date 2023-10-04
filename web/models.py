@@ -172,6 +172,14 @@ class stepFour(models.Model):
     sol_design_problem = models.CharField(max_length=1200, default="")
     green_sol = models.CharField(max_length=1200, default="")
 
+    @property
+    def imageURL(self):
+        try:
+            url = self.blueprint.url
+        except:
+            url = ""
+        return url
+    
     def __str__(self):
         return str(self.teamId)
 
@@ -197,6 +205,16 @@ class stepSix(models.Model):
     notes = models.CharField(max_length=1200, default="")
     prototype_pic = models.ImageField(null=True, blank=True)
 
+    @property
+    def imageURL(self):
+        try:
+            url = self.prototype_pic.url
+            print(url)
+        except:
+            url = ""
+            print(url)
+        return url
+    
     def __str__(self):
         return str(self.teamId)
 
@@ -222,6 +240,7 @@ class stepEight(models.Model):
     nameinvention = models.CharField(max_length=1200, default="")
     benefits = models.CharField(max_length=1200, default="")
     price = models.CharField(max_length=1200, default="")
+    buy = models.CharField(max_length=1200, default="")
     customer_age = models.CharField(max_length=1200, default="")
     customer_gender = models.CharField(max_length=1200, default="")
     customer_education = models.CharField(max_length=1200, default="")
@@ -242,6 +261,17 @@ class surveyLogbook(models.Model):
     thanking = models.CharField(max_length=1200, default="")
     difficulty = models.CharField(max_length=1200, default="")
     future = models.CharField(max_length=1200, default="")
+
+    def __str__(self):
+        return str(self.teamId)
+
+class Note(models.Model):
+    userId = models.IntegerField()
+    teamId = models.IntegerField()
+    date_updated = models.DateTimeField(auto_now_add=True)
+    
+    note_title= models.CharField(max_length=1200, default="")
+    note_desc= models.CharField(max_length=1200, default="")
 
     def __str__(self):
         return str(self.teamId)

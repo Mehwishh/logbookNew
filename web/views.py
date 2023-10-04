@@ -116,12 +116,11 @@ def flowchart(request, pk, sk):
     if request.method == "POST":
         return redirect("step_1", pk, sk)
     context = {"pk": pk, "sk": sk}
-    return render(request, "website/flowchart.html",context)
+    return render(request, "website/flowchart.html", context)
 
 
 def step_1(request, pk, sk):
     step1 = stepOne.objects.filter(teamId=sk).order_by("-date_updated").first()
-    print(step1)
     if request.method == "POST":
         identify_problems = request.POST.get("initial_problem")
         if step1 == None:
@@ -145,7 +144,6 @@ def step_1(request, pk, sk):
 
 def step_2(request, pk, sk):
     step2 = stepTwo.objects.filter(teamId=sk).order_by("-date_updated").first()
-    print(step2)
     if request.method == "POST":
         p1name1 = request.POST.get("p1name1")
         p1name2 = request.POST.get("p1name2")
@@ -299,7 +297,7 @@ def step_3(request, pk, sk):
 def step_4(request, pk, sk):
     step4 = stepFour.objects.filter(teamId=sk).order_by("-date_updated").first()
     if request.method == "POST":
-        blueprint = request.POST.get("blueprint")
+        blueprint = request.FILES.get("blueprint")
         teacher_name = request.POST.get("teacher_name")
         teacher_sign = request.POST.get("teacher_sign")
         date = request.POST.get("date")
@@ -317,29 +315,54 @@ def step_4(request, pk, sk):
         i3problemface = request.POST.get("i3problemface")
         sol_design_problem = request.POST.get("sol_design_problem")
         green_sol = request.POST.get("green_sol")
-        stepFour.objects.create(
-            userId=pk,
-            teamId=sk,
-            blueprint=blueprint,
-            teacher_name=teacher_name,
-            teacher_sign=teacher_sign,
-            date=date,
-            i1expert=i1expert,
-            i1credentials=i1credentials,
-            i1identified=i1identified,
-            i1problemface=i1problemface,
-            i2expert=i2expert,
-            i2credentials=i2credentials,
-            i2identified=i2identified,
-            i2problemface=i2problemface,
-            i3expert=i3expert,
-            i3credentials=i3credentials,
-            i3identified=i3identified,
-            i3problemface=i3problemface,
-            sol_design_problem=sol_design_problem,
-            green_sol=green_sol,
-        )
-        return redirect("step_5", pk, sk)
+        if blueprint == None:
+            stepFour.objects.create(
+                userId=pk,
+                teamId=sk,
+                blueprint=step4.blueprint,
+                teacher_name=teacher_name,
+                teacher_sign=teacher_sign,
+                date=date,
+                i1expert=i1expert,
+                i1credentials=i1credentials,
+                i1identified=i1identified,
+                i1problemface=i1problemface,
+                i2expert=i2expert,
+                i2credentials=i2credentials,
+                i2identified=i2identified,
+                i2problemface=i2problemface,
+                i3expert=i3expert,
+                i3credentials=i3credentials,
+                i3identified=i3identified,
+                i3problemface=i3problemface,
+                sol_design_problem=sol_design_problem,
+                green_sol=green_sol,
+            )
+            return redirect("step_5", pk, sk)
+        else:
+            stepFour.objects.create(
+                userId=pk,
+                teamId=sk,
+                blueprint=blueprint,
+                teacher_name=teacher_name,
+                teacher_sign=teacher_sign,
+                date=date,
+                i1expert=i1expert,
+                i1credentials=i1credentials,
+                i1identified=i1identified,
+                i1problemface=i1problemface,
+                i2expert=i2expert,
+                i2credentials=i2credentials,
+                i2identified=i2identified,
+                i2problemface=i2problemface,
+                i3expert=i3expert,
+                i3credentials=i3credentials,
+                i3identified=i3identified,
+                i3problemface=i3problemface,
+                sol_design_problem=sol_design_problem,
+                green_sol=green_sol,
+            )
+            return redirect("step_5", pk, sk)
     context = {"pk": pk, "sk": sk, "step4": step4}
     return render(request, "website/step_4.html", context)
 
@@ -381,13 +404,21 @@ def step_6(request, pk, sk):
     step6 = stepSix.objects.filter(teamId=sk).order_by("-date_updated").first()
     if request.method == "POST":
         notes = request.POST.get("notes")
-        prototype_pic = request.POST.get("prototype_pic")
+        prototype_pic = request.FILES.get("prototype_pic")
         if step6 == None:
             stepSix.objects.create(
                 userId=pk,
                 teamId=sk,
                 notes=notes,
                 prototype_pic=prototype_pic,
+            )
+            return redirect("step_7", pk, sk)
+        if prototype_pic == None:
+            stepSix.objects.create(
+                userId=pk,
+                teamId=sk,
+                notes=notes,
+                prototype_pic=step6.prototype_pic,
             )
             return redirect("step_7", pk, sk)
         elif notes != step6.notes or prototype_pic != step6.prototype_pic:
@@ -442,6 +473,7 @@ def step_8(request, pk, sk):
         nameinvention = request.POST.get("nameinvention")
         benefits = request.POST.get("benefits")
         price = request.POST.get("price")
+        buy = request.POST.get("buy")
         customer_age = request.POST.get("customer_age")
         customer_gender = request.POST.get("customer_gender")
         customer_education = request.POST.get("customer_education")
@@ -454,6 +486,7 @@ def step_8(request, pk, sk):
             nameinvention=nameinvention,
             benefits=benefits,
             price=price,
+            buy=buy,
             customer_age=customer_age,
             customer_gender=customer_gender,
             customer_education=customer_education,
@@ -504,12 +537,64 @@ def survey(request, pk, sk):
 
 
 def notes(request, pk, sk):
-    context = {
-        "pk": pk,
-        "sk": sk,
-    }
+    note = Note.objects.filter(teamId=sk).order_by("-date_updated").first()
+    if request.method == "POST":
+        note_title = request.POST.get("note_title")
+        note_desc = request.POST.get("note_desc")
+        if note == None:
+            Note.objects.create(
+                userId=pk,
+                teamId=sk,
+                note_title=note_title,
+                note_desc=note_desc,
+            )
+            return redirect("preview_logbook", pk, sk)
+        elif note_title != note.note_title or note_desc != note.note_desc:
+            Note.objects.create(
+                userId=pk,
+                teamId=sk,
+                note_title=note_title,
+                note_desc=note_desc,
+            )
+            return redirect("preview_logbook", pk, sk)
+        return redirect("preview_logbook", pk, sk)
+    context = {"pk": pk, "sk": sk, "note": note}
     return render(request, "website/notes.html", context)
 
 
 def preview_logbook(request, pk, sk):
-    return HttpResponse("preview_logbook")
+    record = (
+        recordOfInvention.objects.filter(teamId=sk).order_by("-date_updated").first()
+    )
+    statement = (
+        statementOfOriginality.objects.filter(teamId=sk)
+        .order_by("-date_updated")
+        .first()
+    )
+    step1 = stepOne.objects.filter(teamId=sk).order_by("-date_updated").first()
+    step2 = stepTwo.objects.filter(teamId=sk).order_by("-date_updated").first()
+    step3 = stepThree.objects.filter(teamId=sk).order_by("-date_updated").first()
+    step4 = stepFour.objects.filter(teamId=sk).order_by("-date_updated").first()
+    step5 = stepFive.objects.filter(teamId=sk).order_by("-date_updated").first()
+    step6 = stepSix.objects.filter(teamId=sk).order_by("-date_updated").first()
+    step7 = stepSeven.objects.filter(teamId=sk).order_by("-date_updated").first()
+    step8 = stepEight.objects.filter(teamId=sk).order_by("-date_updated").first()
+    survey = surveyLogbook.objects.filter(teamId=sk).order_by("-date_updated").first()
+    note = Note.objects.filter(teamId=sk).order_by("-date_updated").first()
+    context = {
+        "pk": pk,
+        "sk": sk,
+        "record": record,
+        "statement": statement,
+        "step1": step1,
+        "step2": step2,
+        "step3": step3,
+        "step4": step4,
+        "step5": step5,
+        "step6": step6,
+        "step7": step7,
+        "step8": step8,
+        "survey": survey,
+        "note": note,
+    }
+    return render(request, "website/preview_logbook.html", context)

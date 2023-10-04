@@ -63,13 +63,13 @@
   <div class="col-md-6">
     <div class="mb-3">
       <label for="nameField" class="form-label">The name of the invention:</label>
-      <p style="text-align: left;"></p>
+      <p style="text-align: left;">{{record.name_of_invention}}</p>
     </div>
   </div>
   <div class="col-md-6">
     <div class="mb-3">
       <label for="dateField" class="form-label">The problem that it solves</label>
-      <p style="text-align: left;"></p>
+      <p style="text-align: left;">{{record.problem_it_solves}}</p>
     </div>
   </div>
 
@@ -108,7 +108,7 @@
           <b>Inventor Name</b>
         </h1>
       </label>
-<p style="text-align: left;">{{logbook.inventor}}</p>
+<p style="text-align: left;">{{statement.inventor1}}</p>
     </div>
     <div class="col-md-6">
       <label class="labels">
@@ -121,7 +121,7 @@
           <b>School Name & Grade</b>
         </h1>
       </label>
-<p style="text-align: left">{{logbook.schoolnamegrade}}</p>
+<p style="text-align: left">{{statement.schoolnamegrade1}}</p>
     </div>
   </div>
 
@@ -140,7 +140,7 @@
             <b>Signature</b>
           </h1>
         </label>
-        <p style="text-align: left">{{logbook.sig1}}</p>
+        <p style="text-align: left">{{statement.sig1}}</p>
       </div>
     </div>
     <div class="col-md-6">
@@ -156,11 +156,11 @@
             <b>Date</b>
           </h1>
         </label>
-        <p style="text-align: left"></p>
+        <p style="text-align: left">{{statement.date1}}</p>
       </div>
     </div>
   </div>
-  <br><br> <br>
+  <br><br><br>
   <!-- 2 -->
   <div class="row">
     <!-- First Row -->
@@ -175,7 +175,7 @@
           <b>Inventor Name</b>
         </h1>
       </label>
-      <p style="text-align: left">{{logbook.member2}}</p>
+      <p style="text-align: left">{{statement.inventor2}}</p>
     </div>
     <div class="col-md-6">
       <label class="labels">
@@ -188,7 +188,7 @@
           <b>School Name & Grade</b>
         </h1>
       </label>
-      <p style="text-align: left">{{logbook.schoolnamegrade2}}</p>
+      <p style="text-align: left">{{statement.schoolnamegrade2}}</p>
      
     </div>
   </div>
@@ -208,7 +208,7 @@
             <b>Signature</b>
           </h1>
         </label>
-<p style="text-align: left">{{logbook.sig2}}</p>      </div>
+<p style="text-align: left">{{statement.sig2}}</p>      </div>
     </div>
     <div class="col-md-6">
       <!-- Date Field -->
@@ -223,7 +223,7 @@
             <b>Date</b>
           </h1>
         </label>
-        <p style="text-align: left"></p>
+        <p style="text-align: left">{{statement.date2}}</p>
       </div>
     </div>
   </div>
@@ -242,7 +242,7 @@
           <b>Inventor Name</b>
         </h1>
       </label>
-      <p style="text-align: left">{{logbook.member3}}</p>
+      <p style="text-align: left">{{statement.inventor3}}</p>
     </div>
     <div class="col-md-6">
       <label class="labels">
@@ -255,7 +255,7 @@
           <b>School Name & Grade</b>
         </h1>
       </label>
-      <p style="text-align: left">{{logbook.schoolnamegrade3}}</p>
+      <p style="text-align: left">{{statement.schoolnamegrade3}}</p>
     
     </div>
   </div>
@@ -275,7 +275,7 @@
             <b>Signature</b>
           </h1>
         </label>
-        <p style="text-align: left">{{logbook.sig3}}</p>
+        <p style="text-align: left">{{statement.sig3}}</p>
        
       </div>
     </div>
@@ -292,7 +292,7 @@
             <b>Date</b>
           </h1>
         </label>
-        <p style="text-align: left"></p>
+        <p style="text-align: left">{{statement.date3}}</p>
       </div>
     </div>
   </div>
@@ -311,7 +311,7 @@
           <b>Inventor Name</b>
         </h1>
       </label>
-      <p style="text-align: left">{{logbook.member4}}</p>
+      <p style="text-align: left">{{statement.inventor4}}</p>
     </div>
     <div class="col-md-6">
       <label class="labels">
@@ -324,7 +324,7 @@
           <b>School Name & Grade</b>
         </h1>
       </label>
-      <p style="text-align: left">{{logbook.schoolnamegrade4}}</p>
+      <p style="text-align: left">{{statement.schoolnamegrade4}}</p>
    
     </div>
   </div>
@@ -344,7 +344,7 @@
             <b>Signature</b>
           </h1>
         </label>
-        <p style="text-align: left">{{logbook.sig4}}</p>
+        <p style="text-align: left">{{statement.sig4}}</p>
       </div>
     </div>
     <div class="col-md-6">
@@ -360,7 +360,7 @@
             <b>Date</b>
           </h1>
         </label>
-        <p style="text-align: left"></p>
+        <p style="text-align: left">{{statement.date4}}</p>
       </div>
     </div>
   </div>
@@ -379,7 +379,7 @@
           <b>Inventor Name</b>
         </h1>
       </label>
-      <p style="text-align: left">{{logbook.member5}}</p>
+      <p style="text-align: left">{{statement.inventor5}}</p>
       
     </div>
     <div class="col-md-6">
@@ -393,7 +393,7 @@
           <b>School Name & Grade</b>
         </h1>
       </label>
-      <p style="text-align: left">{{logbook.schoolnamegrade5}}</p>
+      <p style="text-align: left">{{statement.schoolnamegrade5}}</p>
       
     </div>
   </div>
@@ -413,7 +413,7 @@
             <b>Signature</b>
           </h1>
         </label>
-        <p style="text-align: left">{{logbook.sig5}}</p>
+        <p style="text-align: left">{{statement.sig5}}</p>
        
       </div>
     </div>
@@ -430,7 +430,7 @@
             <b>Date</b>
           </h1>
         </label>
-        <p style="text-align: left"></p>
+        <p style="text-align: left">{{statement.date5}}</p>
       </div>
     </div>
   </div><br><br> <br>
@@ -447,7 +447,7 @@
           <b>Inventor Name</b>
         </h1>
       </label>
-      <p style="text-align: left">{{logbook.member6}}</p>
+      <p style="text-align: left">{{statement.inventor6}}</p>
       
     </div>
     <div class="col-md-6">
@@ -461,7 +461,7 @@
           <b>School Name & Grade</b>
         </h1>
       </label>
-      <p style="text-align: left">{{logbook.schoolnamegrade6}}</p>
+      <p style="text-align: left">{{statement.schoolnamegrade6}}</p>
     </div>
   </div>
 
@@ -480,7 +480,7 @@
             <b>Signature</b>
           </h1>
         </label>
-         <p style="text-align: left">{{logbook.sig6}}</p>
+         <p style="text-align: left">{{statement.sig6}}</p>
      
       </div>
     </div>
@@ -497,13 +497,13 @@
             <b>Date</b>
           </h1>
         </label>
-        <p style="text-align: left"></p>
+        <p style="text-align: left">{{statement.date6}}</p>
       </div>
     </div>
   </div>
 </div>
 
-<!-- step1 -->
+<!-- step2 -->
 <br />
 <nav class="navbars">
   <div class="container-fluid-nav text-center">
@@ -518,7 +518,7 @@
         <b>Q1.Identify a few problems you or your friends and family relate
           with</b>
       </label>
-      <p style="text-align: left">{{logbook.initial_problem}}
+      <p style="text-align: left">{{step1.identify_problems}}
       </p>
     </div>
   </form>
@@ -557,16 +557,16 @@
                   <div class="col-md-4 column">
                     <h3>Person Name</h3>
                     <div class="mb-3">
-                      <p style="text-align: left"></p>
+                      <p style="text-align: left">{{step2.p1name1}}</p>
                     </div>
                     <div class="mb-3">
-                      <p style="text-align: left"></p>
+                      <p style="text-align: left">{{step2.p1name2}}</p>
                     </div>
                     <div class="mb-3">
-                      <p style="text-align: left"></p>
+                      <p style="text-align: left">{{step2.p1name3}}</p>
                     </div>
                     <div class="mb-3">
-                      <p style="text-align: left"></p>
+                      <p style="text-align: left">{{step2.p1name4}}</p>
                     </div>
                   </div>
 
@@ -574,16 +574,16 @@
                   <div class="col-md-4 column">
                     <h3>Age</h3>
                     <div class="mb-3">
-                      <p style="text-align: left"></p>
+                      <p style="text-align: left">{{step2.p1age1}}</p>
                     </div>
                     <div class="mb-3">
-                      <p style="text-align: left"></p>
+                      <p style="text-align: left">{{step2.p1age2}}</p>
                     </div>
                     <div class="mb-3">
-                      <p style="text-align: left"></p>
+                      <p style="text-align: left">{{step2.p1age3}}</p>
                     </div>
                     <div class="mb-3">
-                      <p style="text-align: left"></p>
+                      <p style="text-align: left">{{step2.p1age4}}</p>
                     </div>
                   </div>
 
@@ -591,17 +591,17 @@
                   <div class="col-md-4 column">
                     <h3>Comments</h3>
                     <div class="mb-3">
-                      <p style="text-align: left"></p>
+                      <p style="text-align: left">{{step2.p1comment1}}</p>
                     </div>
                     <div class="mb-3">
 
-                      <p style="text-align: left"></p>
+                      <p style="text-align: left">{{step2.p1comment2}}</p>
                     </div>
                     <div class="mb-3">
-                      <p style="text-align: left"></p>
+                      <p style="text-align: left">{{step2.p1comment3}}</p>
                     </div>
                     <div class="mb-3">
-                      <p style="text-align: left"></p>
+                      <p style="text-align: left">{{step2.p1comment4}}</p>
                     </div>
                   </div>
                 </div>
@@ -626,16 +626,16 @@
                   <div class="col-md-4 column">
                     <h3>Person Name</h3>
                     <div class="mb-3">
-                      <p style="text-align: left"></p>
+                      <p style="text-align: left">{{step2.p2name1}}</p>
                     </div>
                     <div class="mb-3">
-                      <p style="text-align: left"></p>
+                      <p style="text-align: left">{{step2.p2name2}}</p>
                     </div>
                     <div class="mb-3">
-                      <p style="text-align: left"></p>
+                      <p style="text-align: left">{{step2.p2name3}}</p>
                     </div>
                     <div class="mb-3">
-                      <p style="text-align: left"></p>
+                      <p style="text-align: left">{{step2.p2name4}}</p>
                     </div>
                   </div>
 
@@ -643,16 +643,16 @@
                   <div class="col-md-4 column">
                     <h3>Age</h3>
                     <div class="mb-3">
-                      <p style="text-align: left"></p>
+                      <p style="text-align: left">{{step2.p2age1}}</p>
                     </div>
                     <div class="mb-3">
-                      <p style="text-align: left"></p>
+                      <p style="text-align: left">{{step2.p2age2}}</p>
                     </div>
                     <div class="mb-3">
-                      <p style="text-align: left"></p>
+                      <p style="text-align: left">{{step2.p2age3}}</p>
                     </div>
                     <div class="mb-3">
-                      <p style="text-align: left"></p>
+                      <p style="text-align: left">{{step2.p2age4}}</p>
                     </div>
                   </div>
 
@@ -660,16 +660,16 @@
                   <div class="col-md-4 column">
                     <h3>Comments</h3>
                     <div class="mb-3">
-                      <p style="text-align: left"></p>
+                      <p style="text-align: left">{{step2.p2comment1}}</p>
                     </div>
                     <div class="mb-3">
-                      <p style="text-align: left"></p>
+                      <p style="text-align: left">{{step2.p2comment2}}</p>
                     </div>
                     <div class="mb-3">
-                      <p style="text-align: left"></p>
+                      <p style="text-align: left">{{step2.p2comment3}}</p>
                     </div>
                     <div class="mb-3">
-                      <p style="text-align: left"></p>
+                      <p style="text-align: left">{{step2.p2comment4}}</p>
                     </div>
                   </div>
                 </div>
@@ -694,16 +694,16 @@
                   <div class="col-md-4 column">
                     <h3>Person Name</h3>
                     <div class="mb-3">
-                      <p style="text-align: left"></p>
+                      <p style="text-align: left">{{step2.p3name1}}</p>
                     </div>
                     <div class="mb-3">
-                      <p style="text-align: left"></p>
+                      <p style="text-align: left">{{step2.p3name2}}</p>
                     </div>
                     <div class="mb-3">
-                      <p style="text-align: left"></p>
+                      <p style="text-align: left">{{step2.p3name3}}</p>
                     </div>
                     <div class="mb-3">
-                      <p style="text-align: left"></p>
+                      <p style="text-align: left">{{step2.p3name4}}</p>
                     </div>
                   </div>
 
@@ -711,16 +711,16 @@
                   <div class="col-md-4 column">
                     <h3>Age</h3>
                     <div class="mb-3">
-                      <p style="text-align: left"></p>
+                      <p style="text-align: left">{{step2.p3age1}}</p>
                     </div>
                     <div class="mb-3">
-                      <p style="text-align: left"></p>
+                      <p style="text-align: left">{{step2.p3age2}}</p>
                     </div>
                     <div class="mb-3">
-                      <p style="text-align: left"></p>
+                      <p style="text-align: left">{{step2.p3age3}}</p>
                     </div>
                     <div class="mb-3">
-                      <p style="text-align: left"></p>
+                      <p style="text-align: left">{{step2.p3age4}}</p>
                     </div>
                   </div>
 
@@ -728,16 +728,16 @@
                   <div class="col-md-4 column">
                     <h3>Comments</h3>
                     <div class="mb-3">
-                      <p style="text-align: left"></p>
+                      <p style="text-align: left">{{step2.p3comment1}}</p>
                     </div>
                     <div class="mb-3">
-                      <p style="text-align: left"></p>
+                      <p style="text-align: left">{{step2.p3comment2}}</p>
                     </div>
                     <div class="mb-3">
-                      <p style="text-align: left"></p>
+                      <p style="text-align: left">{{step2.p3comment3}}</p>
                     </div>
                     <div class="mb-3">
-                      <p style="text-align: left"></p>
+                      <p style="text-align: left">{{step2.p3comment4}}</p>
                     </div>
                   </div>
                 </div>
@@ -763,16 +763,16 @@
                   <div class="col-md-4 column">
                     <h3>Person Name</h3>
                     <div class="mb-3">
-                      <p style="text-align: left"></p>
+                      <p style="text-align: left">{{step2.p4name1}}</p>
                     </div>
                     <div class="mb-3">
-                      <p style="text-align: left"></p>
+                      <p style="text-align: left">{{step2.p4name2}}</p>
                     </div>
                     <div class="mb-3">
-                      <p style="text-align: left"></p>
+                      <p style="text-align: left">{{step2.p4name3}}</p>
                     </div>
                     <div class="mb-3">
-                      <p style="text-align: left"></p>
+                      <p style="text-align: left">{{step2.p4name4}}</p>
                     </div>
                   </div>
 
@@ -780,16 +780,16 @@
                   <div class="col-md-4 column">
                     <h3>Age</h3>
                     <div class="mb-3">
-                      <p style="text-align: left"></p>
+                      <p style="text-align: left">{{step2.p4age1}}</p>
                     </div>
                     <div class="mb-3">
-                      <p style="text-align: left"></p>
+                      <p style="text-align: left">{{step2.p4age2}}</p>
                     </div>
                     <div class="mb-3">
-                      <p style="text-align: left"></p>
+                      <p style="text-align: left">{{step2.p4age3}}</p>
                     </div>
                     <div class="mb-3">
-                      <p style="text-align: left"></p>
+                      <p style="text-align: left">{{step2.p4age4}}</p>
                     </div>
                   </div>
 
@@ -797,16 +797,16 @@
                   <div class="col-md-4 column">
                     <h3>Comments</h3>
                     <div class="mb-3">
-                      <p style="text-align: left"></p>
+                      <p style="text-align: left">{{step2.p4comment1}}</p>
                     </div>
                     <div class="mb-3">
-                      <p style="text-align: left"></p>
+                      <p style="text-align: left">{{step2.p4comment2}}</p>
                     </div>
                     <div class="mb-3">
-                      <p style="text-align: left"></p>
+                      <p style="text-align: left">{{step2.p4comment3}}</p>
                     </div>
                     <div class="mb-3">
-                      <p style="text-align: left"></p>
+                      <p style="text-align: left">{{step2.p4comment4}}</p>
                     </div>
                   </div>
                 </div>
@@ -815,7 +815,7 @@
           </div>
         </div>
       </div><br>
-      <p style="text-align: left">{{logbook.selected_problem}}
+      <p style="text-align: left">{{step2.other_notes}}
       </p>
     </div>
     <div class="form-group">
@@ -825,7 +825,7 @@
           problem when someone else reads it. Share how you came up with the
           problem.</b>
       </label>
-      <p style="text-align: left">{{logbook.describe_problem}}
+      <p style="text-align: left">{{step2.describe_problem}}
       </p>
     </div>
   </form>
@@ -834,7 +834,7 @@
       <b>2.3 Very specifically, list what do you want your solution to
         achieve?</b>
     </label>
-    <p style="text-align: left">{{logbook.specific_sol}}
+    <p style="text-align: left">{{step2.specific_solution}}
     </p>
   </div>
   <div></div>
@@ -853,14 +853,14 @@
       <label class="form-label" for="inputlg">
         <b>3.1 List the most important factors in solving this problem?</b>
       </label>
-      <p style="text-align: left">{{logbook.factors}}
+      <p style="text-align: left">{{step3.factors}}
       </p>
     </div>
     <div class="form-group">
       <label class="form-label" for="inputlg">
         <b>3.1.1 what are some different ways you can solve this problem?</b>
       </label>
-      <p style="text-align: left">
+      <p style="text-align: left">{{step3.ways_to_solve}}
       </p>
     </div>
     <div class="form-group">
@@ -869,14 +869,14 @@
           already available to use. How are they different from what you are
           trying to do?</b>
       </label>
-      <p style="text-align: left">{{logbook.research}}
+      <p style="text-align: left">{{step3.research}}
       </p>
     </div>
     <div class="form-group">
       <label class="form-label" for="inputlg">
         <b>3.2.1 How are they different from what you are trying to do?</b>
       </label>
-      <p style="text-align: left">
+      <p style="text-align: left">{{step3.difference}}
       </p>
     </div>
   </form>
@@ -901,22 +901,20 @@
           all its functions
         </b>
       </label>
-      <p style="text-align: left">{{logbook.blueprint}}
-      </p>
+      <div class="container">
+        <img src="{{step6.imageURL}}" alt="" style="width: 100%; height: 100%;">
+      </div>
     </div>
     <br>
     <div class="container p-3 bg-light">
       <center>
-        <h2 style="
-                              color: darkgreen;
-                              font-family: 'Times New Roman', Times, serif;
-                            ">
+        <h2 style="color: darkgreen; font-family: 'Times New Roman', Times, serif;">
           Mentor/Teacher Solution Sign-Off
         </h2>
       </center>
       <hr />
       <p>
-        I,_____, am aware of the guidelines for the invention process and approve the solution each of my
+        I, {{step4.teacher_name}}, am aware of the guidelines for the invention process and approve the solution each of my
         students/team wants to pursue. This
         solution and the process of developing it is within the guidelines and meets safety requirements. I will guide
         them through this process.
@@ -926,14 +924,14 @@
           <!-- signature Field -->
           <div class="mb-3">
             <label for="nameField" class="form-label">Teacher’s Signature:</label>
-            <p style="background-color: rgb(255, 255, 255);">Signature</p>
+            <p style="background-color: rgb(255, 255, 255);">{{step4.teacher_sign}}</p>
           </div>
         </div>
         <div class="col-md-6">
           <!-- Date Field -->
           <div class="mb-3">
             <label for="dateField" class="form-label">Date:</label>
-            <p style="background-color: rgb(255, 255, 255);">Date</p>
+            <p style="background-color: rgb(255, 255, 255);">{{step4.date}}</p>
           </div>
         </div>
 
@@ -966,19 +964,19 @@
               <form>
                 <div class="mb-3">
                   <label for="userName" class="form-label">User/Expert Name:</label>
-                  <p style="text-align: left; "></p>
+                  <p style="text-align: left; ">{{step4.i1expert}}</p>
                 </div>
                 <div class="mb-3">
                   <label for="credentials" class="form-label">Credentials of the experts:</label>
-                  <p style="text-align: left; "></p>
+                  <p style="text-align: left; ">{{step4.i1credentials}}</p>
                 </div>
                 <div class="mb-3">
                   <label for="problemIdentified" class="form-label">Problem user/expert identified:</label>
-                  <p style="text-align: left; "></p>
+                  <p style="text-align: left; ">{{step4.i1identified}}</p>
                 </div>
                 <div class="mb-3">
                   <label for="problemYouWillFace" class="form-label">Problem you think you will face:</label>
-                  <p style="text-align: left; "></p>
+                  <p style="text-align: left; ">{{step4.i1problemface}}</p>
                 </div>
               </form>
             </div>
@@ -997,19 +995,19 @@
               <form>
                 <div class="mb-3">
                   <label for="userName" class="form-label">User/Expert Name:</label>
-                  <p style="text-align: left; "></p>
+                  <p style="text-align: left; ">{{step4.i2expert}}</p>
                 </div>
                 <div class="mb-3">
                   <label for="credentials" class="form-label">Credentials of the experts:</label>
-                  <p style="text-align: left; "></p>
+                  <p style="text-align: left; ">{{step4.i2credentials}}</p>
                 </div>
                 <div class="mb-3">
                   <label for="problemIdentified" class="form-label">Problem user/expert identified:</label>
-                  <p style="text-align: left; "></p>
+                  <p style="text-align: left; ">{{step4.i2identified}}</p>
                 </div>
                 <div class="mb-3">
                   <label for="problemYouWillFace" class="form-label">Problem you think you will face:</label>
-                  <p style="text-align: left; "></p>
+                  <p style="text-align: left; ">{{step4.i2problemface}}</p>
                 </div>
               </form>.
             </div>
@@ -1028,27 +1026,25 @@
               <form>
                 <div class="mb-3">
                   <label for="userName" class="form-label">User/Expert Name:</label>
-                  <p style="text-align: left; "></p>
+                  <p style="text-align: left; ">{{step4.i3expert}}</p>
                 </div>
                 <div class="mb-3">
                   <label for="credentials" class="form-label">Credentials of the experts:</label>
-                  <p style="text-align: left; "></p>
+                  <p style="text-align: left; ">{{step4.i3credentials}}</p>
                 </div>
                 <div class="mb-3">
                   <label for="problemIdentified" class="form-label">Problem user/expert identified:</label>
-                  <p style="text-align: left; "></p>
+                  <p style="text-align: left; ">{{step4.i3identified}}</p>
                 </div>
                 <div class="mb-3">
                   <label for="problemYouWillFace" class="form-label">Problem you think you will face:</label>
-                  <p style="text-align: left; "></p>
+                  <p style="text-align: left; ">{{step4.i3problemface}}</p>
                 </div>
               </form>
             </div>
           </div>
         </div>
       </div>
-      <!-- <p style="text-align: left">{{logbook.design_problem}}
-          </p> -->
     </div><br>
     <div class="form-group">
       <label class="form-label" for="inputlg">
@@ -1059,7 +1055,7 @@
           add more iterations to your first model (Model i1….Model i2)
         </b>
       </label>
-      <p style="text-align: left">{{logbook.sol_design_problem}}
+      <p style="text-align: left">{{step4.sol_design_problem}}
       </p>
     </div>
     <div class="form-group">
@@ -1072,7 +1068,7 @@
           damage the environment, it is a sustainable solution?
         </b>
       </label>
-      <p style="text-align: left">{{logbook.green_sol}}
+      <p style="text-align: left">{{step4.green_sol}}
       </p>
     </div>
   </form>
@@ -1096,7 +1092,7 @@
           components you will use and where you will get them from.
         </b>
       </label>
-      <p style="text-align: left">{{logbook.materials}}
+      <p style="text-align: left">{{step5.materials}}
       </p>
     </div>
     <div class="form-group">
@@ -1109,7 +1105,7 @@
           your findings here.
         </b>
       </label>
-      <p style="text-align: left">{{logbook.findings}}
+      <p style="text-align: left">{{step5.findings}}
       </p>
     </div>
   </form>
@@ -1118,7 +1114,7 @@
       <b>5.3 Connect with experts who can help you make the prototype. Note
         the credentials of the experts here.</b>
     </label>
-    <p style="text-align: left">{{logbook.credit}}
+    <p style="text-align: left">{{step5.credit}}
     </p>
   </div>
   <div></div>
@@ -1142,20 +1138,19 @@
           while building. Attach pictures of the process as you build.
         </b>
       </label>
-      <!-- <p style="text-align: left">{{logbook.prototype}}
-      </p> -->
     </div> 
        <div class="form-group">
       <label class="form-label" for="inputlg"> Notes </label>
-      <p style="text-align: left">{{logbook.notes}}
+      <p style="text-align: left">{{step6.notes}}
       </p>
     </div>
     <div class="form-group">
       <label for="formFileMultiple" class="form-label">
         Upload Picture
       </label>
-      <p style="text-align: left">{{logbook.prototype_pic}}
-      </p>
+      <div class="container">
+        <img src="{{step6.imageURL}}" alt="" style="width: 100%; height: 100%;">
+      </div>
     </div>
 
   </form>
@@ -1178,7 +1173,7 @@
           Identify any problems you see. Describe how you tested your
           prototype.</b>
       </label>
-      <p style="text-align: left">{{logbook.testing}}
+      <p style="text-align: left">{{step7.testing}}
       </p>
     </div><h1>Now, test your prototype
 </h1>
@@ -1187,34 +1182,29 @@
         <b>7.2 Identify and record all positive and negative observations
           you have each time you test your prototype.</b>
       </label>
-
-      <!-- <p style="text-align: left">{{logbook.invention}}
-      </p> -->
     </div>
     <div class="form-group">
       <label class="form-label" for="inputlg" style="color: green">
         Positive
       </label>
-      <p style="text-align: left">{{logbook.positive}}
+      <p style="text-align: left">{{step7.positive}}
       </p>
     </div>
     <div class="form-group">
       <label class="form-label" for="inputlg" style="color: green">
        Negative
       </label>
-      <p style="text-align: left">{{logbook.negative}}
+      <p style="text-align: left">{{step7.negative}}
       </p>
     </div>
           <label class="form-label" for="inputlg">
-           
               At this point, consider if you need to go back
-              <a href="{% url 'step_4' logbook.code %}">TO THE DRAWING BOARD (Step 4)</a> or
-              <a href="{% url 'step_6' logbook.code %}">OVER TO THE LAB(Step 6)</a> for some
+              <a href="{% url 'step_4' pk sk %}">TO THE DRAWING BOARD (Step 4)</a> or
+              <a href="{% url 'step_6' pk sk %}">OVER TO THE LAB(Step 6)</a> for some
               revisions to the prototype. Keep creating new versions of
               ModelI1…, ProtoI as needed so you can record all the iterations
               you did. Keep making changes to your prototype and try new
               iterations until your invention works as planned.
-            
           </label>
   </form>
   <div></div>
@@ -1249,7 +1239,7 @@
         <b>8.1 What possible words, word combinations and names can you
           think of?</b>
       </label>
-      <p style="text-align: left">{{logbook.nameinvention}}
+      <p style="text-align: left">{{step8.nameinvention}}
       </p>
     </div>
     <div class="form-group">
@@ -1259,7 +1249,7 @@
           and/ or different than the products already available in the
           market?</b>
       </label>
-      <p style="text-align: left">{{logbook.benefits}}
+      <p style="text-align: left">{{step8.benefits}}
       </p>
     </div>
     <div class="form-group">
@@ -1268,7 +1258,7 @@
           you to build the product? What it will cost you to sell it? What
           will people be willing to pay for it?</b>
       </label>
-      <p style="text-align: left">{{logbook.price}}
+      <p style="text-align: left">{{step8.price}}
       </p>
     </div>
     <div>
@@ -1276,7 +1266,7 @@
         <label class="form-label" for="inputlg">
           <b>8.4 Finally, decide where will customers be able to buy it.</b>
         </label>
-        <p style="text-align: left">{{logbook.buy}}
+        <p style="text-align: left">{{step8.buy}}
         </p>
       </div>
       <div class="form-group">
@@ -1286,23 +1276,23 @@
         <div class="row mt-3">
           <div class="col-md-12">
             <label class="labels"> Age: </label>
-            <p style="text-align: left">{{logbook.customer_age}}</p>
+            <p style="text-align: left">{{step8.customer_age}}</p>
           </div>
           <div class="col-md-12">
             <label class="labels"> Gender </label>
-            <p style="text-align: left">{{logbook.customer_gender}}</p>
+            <p style="text-align: left">{{step8.customer_gender}}</p>
           </div>
           <div class="col-md-12">
             <label class="labels"> Education Level: </label>
-            <p style="text-align: left">{{logbook.customer_education}}</p>
+            <p style="text-align: left">{{step8.customer_education}}</p>
           </div>
           <div class="col-md-12">
             <label class="labels"> Household Size: </label>
-            <p style="text-align: left">{{logbook.customer_house}}</p>
+            <p style="text-align: left">{{step8.customer_house}}</p>
           </div>
           <div class="col-md-12">
             <label class="labels"> Marital Status: </label>
-            <p style="text-align: left">{{logbook.customer_marital}}</p>
+            <p style="text-align: left">{{step8.customer_marital}}</p>
           </div>
         </div>
       </div>
@@ -1311,7 +1301,7 @@
       <label class="form-label" for="inputlg">
         <small>Other Notes</small>
       </label>
-      <p style="text-align: left">{{logbook.other_notes}}
+      <p style="text-align: left">{{step8.other_notes}}
       </p>
     </div>
   </form>
@@ -1321,7 +1311,7 @@
   <div class="row">
     <div class="col-12 d-flex align-items-center justify-content-center">
       <!-- Modified -->
-      <a href="{% url 'course_outline' logbook.code %}"><button class="btn btn-success mr-1"
+      <a href="{% url 'course_outline' pk sk %}"><button class="btn btn-success mr-1"
           type="button">Back</button></a>
     </div>
   </div>
