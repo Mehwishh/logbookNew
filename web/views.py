@@ -515,7 +515,7 @@ def survey(request, pk, sk):
                 difficulty=difficulty,
                 future=future,
             )
-            return redirect("notes", pk, sk)
+            return redirect("logbook_complete", pk, sk)
         elif (
             things_enjoyed != survey.things_enjoyed
             or thanking != survey.thanking
@@ -530,11 +530,14 @@ def survey(request, pk, sk):
                 difficulty=difficulty,
                 future=future,
             )
-            return redirect("notes", pk, sk)
-        return redirect("notes", pk, sk)
+            return redirect("logbook_complete", pk, sk)
+        return redirect("logbook_complete", pk, sk)
     context = {"pk": pk, "sk": sk, "survey": survey}
     return render(request, "website/survey.html", context)
 
+def logbook_complete(request,pk,sk):
+    context = {"pk": pk, "sk": sk, "survey": survey}
+    return render(request, 'website/logbook_complete.html',context)
 
 def notes(request, pk, sk):
     note = Note.objects.filter(teamId=sk).order_by("-date_updated").first()

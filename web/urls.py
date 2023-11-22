@@ -26,6 +26,7 @@ urlpatterns = [
     path("step_7/<str:pk>/<str:sk>/", views.step_7, name="step_7"),
     path("step_8/<str:pk>/<str:sk>/", views.step_8, name="step_8"),
     path("survey/<str:pk>/<str:sk>/", views.survey, name="survey"),
+    path("logbook_complete/<str:pk>/<str:sk>/", views.logbook_complete, name="logbook_complete"),
     path("notes/<str:pk>/<str:sk>/", views.notes, name="notes"),
     path(
         "preview_logbook/<str:pk>/<str:sk>/",
