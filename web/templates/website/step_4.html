@@ -19,10 +19,10 @@
         your solution will (a) look; (b) what parts/ components/ elements it
         will involve; (c) how it will work. If possible, show or list all
         its functions</label>
-      <input class="form-control form-control-lg" id="formFileLg" name="blueprint" type="file"
+      <input class="form-control form-control-lg" id="formFileLg imageInput" name="blueprint" accept="image/*" onchange="showImage()" type="file"
         value="{{step4.blueprint}}" />
-        <div class="container">
-          <img src="{{step4.imageURL}}" alt="" style="width: 100%; height: 100%;">
+        <div class="container" id="imageContainer" style="display: none;">
+          <img id="submittedImage" src="{{step4.imageURL}}" alt="" style="width: 100%; height: 100%;">
         </div>
     </div><br>
       <div class="container p-3 bg-light">
@@ -186,5 +186,29 @@
   </form>
 </div>
 <!-- Question Answeer Box  Ends-->
+<script>
+  function showImage() {
+  const input = document.getElementById('imageInput');
+  const container = document.getElementById('imageContainer');
+  const image = document.getElementById('submittedImage');
+
+  // Check if a file is selected
+  if (input.files.length > 0) {
+    const file = input.files[0];
+    const reader = new FileReader();
+
+    reader.onload = function (e) {
+      // Set the source of the image to the uploaded file
+      image.src = e.target.result;
+      // Display the image container
+      container.style.display = 'block';
+    }; 
+
+    reader.readAsDataURL(file);
+  } else {
+    alert('Please select an image.');
+  }
+}
+</script>
 
 {% endblock %}
